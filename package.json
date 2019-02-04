@@ -1,15 +1,14 @@
 {
-  "name": "c0deyourfuture",
+  "name": "asd-kamieniarstwo",
   "version": "1.0.0",
-  "description": "a website for \"zwolnieni z teorii\" project",
+  "description": "single webpage for a customer",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "zwolnieni",
-    "z",
-    "teorii",
+    "asd",
+    "kamieniarstwo",
     "website"
   ],
   "author": "Dominik Obuch",

@@ -61,29 +61,20 @@ gulp.task("uncss", function () {
 gulp.task('useref', () => {
   return gulp.src('app/*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js',  
+    .pipe(gulpIf('index.js',  
       babel({
         presets: ['@babel/env']
       })
      ))
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(htmlmin({
+    .pipe(gulpIf("*.html", htmlmin({
       collapseWhitespace: true,
        conservativeCollapse: true
-      }))
+      })))
     .pipe(gulp.dest('docs'))
 });
 
-gulp.task("moveframeworks", function () {
 
-  gulp.src("/node_modules/bootstrap/docs/js/bootstrap.min.js")
-  gulp.src("/node_modules/ionicons/dist/ionicons.js")
-  gulp.src("/node_modules/jquery/dist/jquery.min.js")
-  gulp.src("/node_modules/popper.js/docs/popper.min.js")
-    .pipe(gulp.dest("app/js"))
-  gulp.src("node_modules/bootstrap/docs/css/bootstrap.min.css")
-    .pipe(gulp.dest("app/css"))
-})
 
 gulp.task('scripts', () => {
   return gulp.src(['app/js/*.js'])
@@ -119,7 +110,7 @@ gulp.task('clean:docs', () => {
 })
 
 gulp.task('default', function (callback) {
-  runSequence(['watch', "moveframeworks", 'sass', 'browserSync'],
+  runSequence(['watch', 'sass', 'browserSync'],
     callback
   )
 })
