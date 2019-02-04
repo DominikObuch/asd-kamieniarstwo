@@ -1,0 +1,1 @@
+{"version":3,"file":"../main.css","sources":["main.scss"],"sourcesContent":["body{\n    margin:0;\n    background: green;\n}"],"names":[],"mappings":"AAAA,AAAA,IAAI,CAAA;EACA,MAAM,EAAC,CAAC;EACR,UAAU,EAAE,KAAK,GACpB"}

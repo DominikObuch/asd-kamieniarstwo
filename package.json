@@ -1,0 +1,42 @@
+{
+  "name": "c0deyourfuture",
+  "version": "1.0.0",
+  "description": "a website for \"zwolnieni z teorii\" project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zwolnieni",
+    "z",
+    "teorii",
+    "website"
+  ],
+  "author": "Dominik Obuch",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babili": "^0.1.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-useref": "^3.1.6",
+    "gulp-util": "^3.0.8",
+    "ionicons": "^4.5.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6",
+    "run-sequence": "^2.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uncss": "^1.0.6"
+  }
+}
