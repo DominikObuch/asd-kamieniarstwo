@@ -9,47 +9,58 @@
     <!-- build:css css/main.min.css-->
     <link href="css/main.css" rel="stylesheet">
     <!-- endbuild-->
+    <link href="https://fonts.googleapis.com/css?family=Muli|Roboto|Ubuntu" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
+        <header class="header row">
+                <div class="header__background position-relative col-12 " ></div>
+            <nav class="  header__nav px-sm-5 col-12 position-fixed  navbar navbar-expand-lg navbar-light ">
+                
+                <a class="navbar-brand" href="index.html"> <img src="images/header/logo.svg" class="header__logo" alt="">
+                </a>
+                <button class="header__button border-0 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="hamburger">
+                        <span class="hamburger__bar hamburger__bar--first"></span>
+                        <span class="hamburger__bar hamburger__bar--second"></span>
+                        <span class="hamburger__bar hamburger__bar--third"></span>
+                    </span>
+                </button>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"> <img src="images/logo.svg" alt=""> </a>
-            <button class="border-0 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <div class="collapse justify-content-end  navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav  mr-0 text-center  ">
+                        <li class="nav-item active mr-lg-4">
+                            <a class="nav-link" href="#">Strona główna <span class="sr-only">(current)</span></a>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li class="nav-item mr-lg-4 active dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Oferta
+                            </a>
+                            <div class="dropdown-menu text-center " aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item   " href="#">Nagrobki</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item  " href="#">Usługi kamieniarskie</a>
+                                <div class="dropdown-divider"></div> <a class="dropdown-item  " href="#">Dodatki</a>
+                            </div>
+                        </li>
 
-            <div class="collapse  navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Strona główna <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Oferta
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item font-weight-bold bg-light" href="#">Nagrobki</a>
-                           
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item font-weight-bold bg-light" href="#">Usługi kamieniarskie</a>
-                           
-                           
-                            <div class="dropdown-divider"></div> <a class="dropdown-item font-weight-bold bg-light" href="#">Dodatki</a>
-                        </div>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Galeria <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Kontakt <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                        <div class="dropdown-divider"></div>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Kontakt <span class="sr-only">(Kontakt)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header__video-cont col-12 ">
+                <div class="position-absolute d-flex justify-content-center align-self-center">Wieloletnie doświadczenie oraz zadowoleni klienci to podstawy naszej firmy. </div>
+                <video class=" header__video col-12 "  loop autoplay preload="auto">
+                    <source src="images/header/FallCemetary_1.mp4"></video></div>
+                    </header>
+
     </div>
 
 

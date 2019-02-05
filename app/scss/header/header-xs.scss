@@ -1,0 +1,34 @@
+
+.header {
+    &__background{
+        height: 5.1rem;
+    }
+    &__logo {
+        height: 3.5rem;
+    }
+
+    &__button {
+        outline: none !important;
+
+    }
+
+
+    &__nav {
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.9);
+        left: 0;
+
+    }
+    &__video{
+        width: 100vw;
+        padding: 0;
+        left: 0;
+        &-cont{
+        width: 100vw;
+        padding: 0;
+        left: 0;
+        
+        }
+        
+    }
+}

@@ -6921,4 +6921,51 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+.hamburger {
+  z-index: 100;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: 1.5rem;
+  vertical-align: middle; }
+  .hamburger__bar {
+    cursor: pointer;
+    right: 2rem;
+    width: 2rem;
+    position: fixed;
+    height: 3.6px;
+    border-radius: 100px;
+    background: black;
+    transition: background 1s; }
+    .hamburger__bar--first {
+      margin-top: -.5rem; }
+    .hamburger__bar--third {
+      margin-top: .5rem; }
+
+.header__background {
+  height: 5.1rem; }
+
+.header__logo {
+  height: 3.5rem; }
+
+.header__button {
+  outline: none !important; }
+
+.header__nav {
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  left: 0; }
+
+.header__video {
+  width: 100vw;
+  padding: 0;
+  left: 0; }
+  .header__video-cont {
+    width: 100vw;
+    padding: 0;
+    left: 0; }
+
+.container {
+  max-width: none !important; }
+
 /*# sourceMappingURL=maps/main.css.map */

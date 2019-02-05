@@ -1,0 +1,25 @@
+.hamburger{
+    z-index: 100;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 1.5rem;
+    vertical-align: middle;
+    &__bar{
+
+        cursor: pointer;
+        right: 2rem;
+        width: 2rem;
+        position: fixed;
+        height: 3.6px;
+        border-radius: 100px;
+        background: black;
+        transition: background 1s;
+        &--first {    
+            margin-top: -.5rem;
+        }
+        &--third {
+            margin-top: .5rem;
+        }
+    }
+}
