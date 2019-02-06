@@ -3,6 +3,6 @@
 @import 'header/main.scss';
 @import "first-article/main.scss";
 
-.container{
-    max-width: none !important;
+html{
+    overflow-x: hidden; //DO NOT DELETE 
 }

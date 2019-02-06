@@ -1,0 +1,23 @@
+
+.first-section{
+    width: 100vw;
+    background: url(/images/first-section/background2.svg) ;
+    background-attachment: fixed;
+   
+  
+    background-repeat: repeat-y; 
+    background-size: 100%;
+    &__heading{
+        font-family: $font-primary;
+    }
+    &__icon{
+        padding-bottom: 2rem;
+    }
+    &__title{
+
+        color: $color-blue-primary;
+    }
+    &__desc{
+        color: $color-blue-secondary;
+    }
+}
