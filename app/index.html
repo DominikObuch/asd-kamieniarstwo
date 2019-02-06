@@ -15,9 +15,9 @@
 <body>
     <div class="container">
         <header class="header row">
-                <div class="header__background position-relative col-12 " ></div>
+            <div class="header__background col-12 "></div>
             <nav class="  header__nav px-sm-5 col-12 position-fixed  navbar navbar-expand-lg navbar-light ">
-                
+
                 <a class="navbar-brand" href="index.html"> <img src="images/header/logo.svg" class="header__logo" alt="">
                 </a>
                 <button class="header__button border-0 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -41,7 +41,7 @@
                                 Oferta
                             </a>
                             <div class="dropdown-menu text-center " aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item   " href="#">Nagrobki</a>
+                                <a class="dropdown-item" href="#">Nagrobki</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item  " href="#">Usługi kamieniarskie</a>
                                 <div class="dropdown-divider"></div> <a class="dropdown-item  " href="#">Dodatki</a>
@@ -50,17 +50,41 @@
 
                         <div class="dropdown-divider"></div>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Kontakt <span class="sr-only">(Kontakt)</span></a>
+                            <a class="nav-link" href="#">Kontakt</a>
                         </li>
                     </ul>
                 </div>
+                
             </nav>
-            <div class="header__video-cont col-12 ">
-                <div class="position-absolute d-flex justify-content-center align-self-center">Wieloletnie doświadczenie oraz zadowoleni klienci to podstawy naszej firmy. </div>
-                <video class=" header__video col-12 "  loop autoplay preload="auto">
-                    <source src="images/header/FallCemetary_1.mp4"></video></div>
-                    </header>
+            <div class="header__video-cont justify-content-center  ">
+                    <h2 class="header__heading d-flex  col-12 text-center justify-content-center text-center ">Wieloletnie
+                        doświadczenie oraz zadowoleni klienci to podstawy naszej firmy. </h2>
+                    <video class=" header__video " id="vid" muted loop autoplay preload="auto">
+                        <source src="images/header/FallCemetary_1.mp4">
+                    </video>
+                </div>
 
+        </header>
+        
+        <section class="first-section row justify-content-center ">
+            <h2 class="first-section__heading pt-3 text-uppercase col-12 text-center font-weight-bolder">o nas</h2>
+            <article class="col-md-3 col-10 text-center"> <img src="images/first-article/_ionicons_svg_ios-school.svg" alt="szkoła">
+                <h4 class="align-baseline">Długoletnie doświadczenie</h4>
+                <div>Profesjonalizm, zaangażowanie i indywidualne podejście gwarantuje satysfakcję naszych klientów.
+                    Zadowoleni klienci wracają, ale też polecają nas.</div>
+            </article>
+            <article class="col-md-3 text-center"> <img src="images/first-article/_ionicons_svg_md-checkmark-circle-outline.svg"
+                    alt="znak jakości">
+                <h4 class="align-baseline">Najwyższa jakość</h4>
+                <div>Od początku działalności specjalizujemy w usługach kamieniarskich.Skupienie na jednym rodzaju
+                    działalności pozwala nam zapewnić najwyższą jakość produktów i usług. </div>
+            </article>
+            <article class="col-md-3 text-center"> <img src="images/first-article/_ionicons_svg_ios-people.svg" alt="ludzie">
+                <h4 class="align-baseline">Dogodne formy zamówienia</h4>
+                <div>Wszystkie nasze produkty objęte są gwarancją. Oferujemy wszystkie dogodne formy płatności:
+                    gotówka, przelew oraz system ratalny bez odsetek.</div>
+            </article>
+        </section>
     </div>
 
 

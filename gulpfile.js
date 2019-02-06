@@ -48,14 +48,14 @@ gulp.task('watch', ['browserSync', 'sass'], () => {
 
 gulp.task("uncss", function () {
   return gulp.src([
-      'app/css/bootstrap.min.css'
+      'app/css/main.css'
     ])
     .pipe(uncss({
       html: [
         'app/index.html'
       ]
     }))
-    .pipe(gulp.dest('docs/css'));
+    .pipe(gulp.dest('app/css'));
 })
 
 gulp.task('useref', () => {
@@ -116,6 +116,6 @@ gulp.task('default', function (callback) {
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:docs', ['sass', 'images'], 'prefixer', 'useref', 'uncss', 
+  runSequence('clean:docs', ['sass', 'images'], 'prefixer', 'uncss','useref', 
     callback)
 })
