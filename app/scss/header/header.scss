@@ -1,0 +1,61 @@
+.header {
+    &__background {
+        height: 5rem;
+        width: 10rem;
+    }
+
+    &__logo {
+        height: 3.5rem;
+    }
+
+    &__button {
+        outline: none !important;
+
+    }
+
+
+    &__nav {
+        z-index: 1000;
+        left: 0;
+        background: rgba(255, 255, 255, 0.93);
+
+    }
+
+    &__video {
+        width: 100vw;
+        filter: brightness(50%) saturate(70%);
+
+        height: 100vh;
+        object-fit: cover;
+
+        &-cont {
+            height: 100vh;
+
+        }
+    }
+
+
+    &__heading {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+        color: $color-light;
+        font-family: $font-decorative;
+    }
+}
+
+
+@include media-breakpoint-up(md) {
+    .header {
+        &__video {
+            object-fit: unset;
+        }
+
+        &__heading {
+            font-size: $font-size + 2rem;
+            top: 52%;
+        }
+    }
+}
