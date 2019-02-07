@@ -5,8 +5,24 @@
     height: 1.5em;
     margin-top: 1.5rem;
     vertical-align: middle;
-    &__bar{
 
+    &__expanded{
+         .hamburger__bar{
+             &--first{
+                transform: rotate(45deg) translate(4.5px, 6px);
+             }
+             &--second{
+                 opacity: 0;
+             }
+             &--third{
+
+                transform: rotate(-45deg) translate(6px, -6.5px);
+             }
+        }
+    }
+    &__bar{
+        transition: .7s all;
+        transition-timing-function: cubic-bezier(.31,-0.63,.63,1.41);
         cursor: pointer;
         right: 2rem;
         width: 2rem;
@@ -14,7 +30,6 @@
         height: 3.6px;
         border-radius: 100px;
         background: black;
-        transition: background 1s;
         &--first {    
             margin-top: -.5rem;
         }
@@ -22,4 +37,7 @@
             margin-top: .5rem;
         }
     }
+}
+.dropdown-menu{
+    transition: 1s all;
 }
