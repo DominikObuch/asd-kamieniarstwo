@@ -1,8 +1,9 @@
 @import 'bootstrap/bootstrap.scss';
 @import "utilities/variables.scss";
-@import 'header/main.scss';
-@import "first-article/main.scss";
-
+@import 'components/header/main.scss';
+@import "components/first-section/main.scss";
+@import "components/second-section/second-section.scss";
+@import "components/footer/main.scss";
 html{
     overflow-x: hidden; //DO NOT DELETE 
 }
