@@ -14,13 +14,14 @@
 
 <body>
     <div class="container-fluid">
+        <!-- HEADER START -->
         <header class="header row">
 
             <nav class="  header__nav col-12 position-fixed w-100 navbar navbar-expand-lg navbar-light ">
 
                 <a class="navbar-brand" href="index.html"> <img src="images/header/logo.svg" class="header__logo" alt="">
                 </a>
-                <button class="header__button border-0 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                <button id="hamburger" class="header__button border-0 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="hamburger">
                         <span class="hamburger__bar hamburger__bar--first"></span>
@@ -64,7 +65,9 @@
             </div>
 
         </header>
+        <!-- HEADER END -->
 
+        <!-- FIRST SECTION START -->
         <section class="first-section row justify-content-center ">
             <h2 class="first-section__heading py-4  text-uppercase col-12 text-center ">o nas</h2>
             <article class="col-md-3 col-10 mb-5 text-center">
@@ -84,16 +87,17 @@
             </article>
             <article class="col-md-3 col-10 mb-4 text-center">
                 <img class="first-section__icon" src="images/first-section/_ionicons_svg_ios-people.svg" alt="ludzie">
-                <header class="second-section__title align-items-center d-flex justify-content-center ">
-                    <h4 class=" px-sm-3 card-title m-0 py-3 px-2 ">Odwiedź nas osobiście lub umów spotkanie na
-                        cmentarzu</h4>
-                </header>
+                <h4 class="first-section__title align-baseline">Dogodne formy zamówienia</h4>
+                
                 <div class="first-section__desc">Wszystkie nasze produkty objęte są gwarancją. Oferujemy wszystkie
                     dogodne formy płatności:
                     gotówka, przelew oraz system ratalny bez odsetek.</div>
             </article>
         </section>
-        <section class="second-section row justify-content-around mb-5">
+        <!-- FIRST SECTION END -->
+
+        <!-- SECOND SECTION START -->
+        <section class="second-section row justify-content-around pb-5">
 
             <article class="card p-0 col-10 col-md-4 col-lg-3 mt-5 ">
                 <img class="second-section__image card-img-top" src="images/second-section/zaklad.jpg" alt="">
@@ -135,7 +139,7 @@
                     <div class="second-section__title align-items-center d-flex justify-content-center ">
                         <h4 class=" px-sm-3 card-title m-0 py-3 px-2 ">Dogodne formy zamówienia</h4>
                     </div>
-                    <div class="second-section__paragraph-cont second-section__paragraph-cont--third ">
+                    <div class="second-section__paragraph-cont second-section__paragraph-cont--third  ">
                         <p class="second-section__paragraph h-100  px-2 py-3">
                             Wszystkie nasze produkty objęte są gwarancją. Oferujemy wszystkie dogodne formy płatności:
                             gotówka, przelew oraz system ratalny bez odsetek. </p>
@@ -144,9 +148,57 @@
                 </div>
             </article>
         </section>
-        <footer class="footer">
-            
+        <!-- SECOND SECTION END -->
+
+        <!-- FOOTER START -->
+        <footer class="row footer pt-5 justify-content-center pb-5">
+            <div class="footer__section col-11 col-md-3 col-lg-2">
+                <header class="footer__heading mb-2 mt-3"><img src="images/footer/logo.svg"></header>
+                <p class="footer__body mt-3">ASD Kamieniarstwo to firma kamieniarska której to wieloletnie utrzymanie
+                    się na rynku tylko
+                    utwierdza w przekonaniu, że trafili państwo na odpowiednią firmę.</p>
+            </div>
+            <div class="footer__section col-11 col-md-3 col-lg-2">
+                <header class="footer__heading mb-2 mt-3 text-uppercase ">
+                    kontakt
+                </header>
+                <div class="footer__body ">
+                   <p> ul.Osobowicka 61 <br /> 51-110 Wrocław <br/> Email: biuro@asd-kamieniarstwo.pl</p> <p>Telefon: +48
+                    667 522 776</p>  Godziny
+                    otwarcia:<br />
+                    <ul>
+                        <li>pn-pt 8-16 </li>
+                        <li> sob 8-14 </li>
+                    </ul>
+                    W sezonie zimowym: <br />
+                    <ul>
+                        <li> pn-pt 9-15</li>
+                        <li>sob 9-13</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__section col-11 col-md-2 col-lg-2 ">
+                <header class="footer__heading  mb-2 mt-3 text-uppercase"> strony</header>
+                <div class="footer__body  ">
+                    <a class="footer__link " rel=”noopener noreferrer” href="index.html">Strona główna</a><br />
+                    <a class="footer__link " rel=”noopener noreferrer” href="oferta.html">Oferta</a><br />
+                    <a class="footer__link mb-5 " rel=”noopener noreferrer” href="nagrobki.html">Nagrobki</a>
+                    <div>
+                        <a rel=”noopener noreferrer” target="_blank" href="https://www.facebook.com/ASD-Kamieniarstwo-795802100586510/"
+                            rel="no">
+                            <img class="footer__logo mt-2" src="images/footer/facebook.svg" alt="facebook logo">
+                        </a>
+                        <a rel=”noopener noreferrer” target="_blank">
+                            <img class=" mt-2" src="images/footer/googleplus.svg" alt=" googleplus logo"></div>
+                    </a>
+                </div>
+                <img>
+
+            </div>
+            <div class="footer__section footer__section--map col-11 col-md-3 col-lg-5"><iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.531084060961!2d17.002630215756277!3d51.135556879575674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fea1f3ad1055b%3A0xa89e70c6e7ec9216!2sASD+Kamieniarstwo!5e0!3m2!1spl!2spl!4v1549562378982"
+                    frameborder="0" style="border:0" allowfullscreen></iframe></div>
         </footer>
+        <!-- FOOTER END -->
 
     </div>
 
