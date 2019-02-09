@@ -1,7 +1,7 @@
 .footer{
     background-color: #0D426C;
     @include media-breakpoint-up(md) { 
-        background: url("/images/footer/background.svg");
+    background: url("../images/footer/background.svg");
     background-position: left;
     background-blend-mode: multiply;
     background-size: cover;

@@ -51,8 +51,16 @@ gulp.task("uncss", function () {
       'app/css/main.css'
     ])
     .pipe(uncss({
+      
       html: [
         'app/index.html'
+      ],
+      ignore: [
+        /\.lazy-loaded/,
+        /\.show/,
+        /\.hamburger__expanded/,
+        /\.collapsed/,
+        /\.collapsing/
       ]
     }))
     .pipe(gulp.dest('app/css'));
