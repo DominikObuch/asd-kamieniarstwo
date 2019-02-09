@@ -1,4 +1,11 @@
 .ofert-section {
+    background: $color-light;
+    @include media-breakpoint-up(md) { 
+        
+    background: url(/images/ofert/background1.jpg) no-repeat fixed center;
+    background-size: cover;
+     }
+    
     &__heading {
         font-size: $font-size + 1rem;
         font-family: $font-secondary;
@@ -24,15 +31,23 @@
             height: 19rem;
         }
     }
+    &__card-body{
+        background: transparent;
+    }
     &__paragraph{
         font-family: $font-primary;
-        font-size: $font-size - 0.1rem;
+        font-size: $font-size;
     }
     &__header{
         font-family: $font-primary;
+        font-weight: bold;
     }
     &__card{
+
+        background: rgba(255,255,255,0.8);
         padding: 0;
+        border: none;
+        
     }
     &__btn{
         font-family: $font-secondary;

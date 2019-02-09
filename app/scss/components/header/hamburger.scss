@@ -12,6 +12,8 @@
                 transform: rotate(45deg) translate(4.5px, 6px);
              }
              &--second{
+
+                transform: translateX(-15px);
                  opacity: 0;
              }
              &--third{
@@ -21,7 +23,7 @@
         }
     }
     &__bar{
-        transition: .7s all;
+        transition: .7s transform, .5s opacity;
         transition-timing-function: cubic-bezier(.31,-0.63,.63,1.41);
         cursor: pointer;
         right: 2rem;
@@ -37,7 +39,4 @@
             margin-top: .5rem;
         }
     }
-}
-.dropdown-menu{
-    transition: 1s all;
 }
