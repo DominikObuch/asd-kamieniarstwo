@@ -60,6 +60,7 @@ gulp.task("uncss", function () {
         /\.show/,
         /\.hamburger__expanded/,
         /\.collapsed/,
+        /\.menu__show/,
         /\.collapsing/
       ]
     }))

@@ -15,7 +15,7 @@
 <body>
     <div class="container-fluid">
         <!-- HEADER START -->
-        <header class="header row">
+        <header class="header row " id="strona-glowna">
 
             <nav class="  header__nav col-12 position-fixed w-100 navbar navbar-expand-lg navbar-light ">
 
@@ -34,25 +34,16 @@
                 <div class="collapse justify-content-end  navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav  mr-0 text-center  ">
                         <li class="nav-item active mr-lg-4">
-                            <a class="nav-link" href="#">Strona główna <span class="sr-only">(current)</span></a>
+                            <a class="nav-link link-smooth" href="#strona-glowna">Strona główna </a>
                         </li>
                         <div class="dropdown-divider"></div>
-                        <li class="nav-item mr-lg-4 active dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Oferta
-                            </a>
-                            <div class="dropdown-menu text-center " aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Nagrobki</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item  " href="#">Usługi kamieniarskie</a>
-                                <div class="dropdown-divider"></div> <a class="dropdown-item  " href="#">Dodatki</a>
-                            </div>
+                        <li class="nav-item mr-lg-4 active  ">
+                            <a class="nav-link" href="oferta.html">Oferta </a>
                         </li>
 
                         <div class="dropdown-divider"></div>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Kontakt</a>
+                            <a class="nav-link link-smooth" href="#kontakt">Kontakt</a>
                         </li>
                     </ul>
                 </div>
@@ -61,47 +52,48 @@
             <div class="header__video-cont ">
                 <h2 class="header__heading position-absolute text-center"> Wieloletnie doświadczenie oraz zadowoleni
                     klienci to podstawy naszej firmy.</h2>
-                <video class="header__video" id="vid" muted loop autoplay preload="auto">
-                    <source src="images/header/FallCemetary_1.mp4"></video>
+                <img class="header__video"  src="images/ofert/background3.jpg">
+                    </img>
             </div>
 
         </header>
+
         <!-- HEADER END -->
 
         <!-- OFERT-SECTION START -->
         <section class="ofert-section row justify-content-around">
             <h3 class="ofert-section__heading elo col-12 text-center  py-4 badge-dark">Nagrobki</h3>
             <article class="ofert-section__card lazy-loading card col-11 col-md-5 mt-4 mb-3">
-                <img class="ofert-section__image lazy-image card-img-top" data-src="images/footer/background.svg" alt="">
-                <div class="card-body ofert-section__card-body text-center">
-                    <h4 class="ofert-section__header card-title">Nagrobki z naszej wystawy</h4>
-                    <p class="ofert-section__paragraph card-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Deserunt a culpa
-                        voluptate voluptas! Corrupti molestias recusandae non distinctio veniam ratione
-                        exercitationem quibusdam, architecto fuga nam aliquam cum cumque, in quae!</p>
-                    <a href="#" class="ofert-section__btn btn-primary btn ">zobacz ofertę</a>
+                <img class="ofert-section__image lazy-image  card-img-top" data-src="images/footer/background.svg" alt="">
+                <div class="card-body ofert-section__card-body d-flex flex-column justify-content-between text-center position-relative">
+                    <h4 class="ofert-section__header card-title">Nagrobki na zamówienie pojedyńcze</h4>
+                    <p class="ofert-section__paragraph card-text">Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Illum sunt labore deleniti non quasi architecto </p>
+                    <a href="#" class="ofert-section__btn btn-primary btn align-self-md-center   ">zobacz ofertę</a>
                 </div>
             </article>
-            <article class="ofert-section__card lazy-loading  card col-11 col-md-5 mt-4 mb-3">
+            <article class="ofert-section__card lazy-loading card col-11 col-md-5 mt-4 mb-3">
                 <img class="ofert-section__image lazy-image  card-img-top" data-src="images/footer/background.svg" alt="">
-                <div class="card-body ofert-section__card-body text-center">
-                    <h4 class="ofert-section__header card-title">Nagrobki na zamówienie</h4>
-                    <p class="ofert-section__paragraph card-text">Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Illum sunt labore deleniti non quasi architecto minus accusantium ipsam cupiditate qui
-                        voluptate, aut consequatur harum et? Ratione cum velit alias doloribus? </p>
-                    <a href="#" class="ofert-section__btn btn-primary btn ">zobacz ofertę</a>
+                <div class="card-body ofert-section__card-body d-flex flex-column justify-content-between text-center position-relative">
+                    <h4 class="ofert-section__header card-title">Nagrobki na zamówienie pojedyńcze</h4>
+                    <p class="ofert-section__paragraph card-text">Lorem Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Veritatis, in inventore? Dolore nemo impedit aperiam laudantium sapiente ab,
+                        aspernatur dignissimos odio, ullam est dolorem reiciendis ea asperiores sit nihil doloribus?
+                        ipsum dolor sit, amet consectetur adipisicing
+                        elit. Illum sunt labore deleniti non quasi architecto </p>
+                    <a href="#" class="ofert-section__btn btn-primary btn align-self-md-center   ">zobacz ofertę</a>
                 </div>
             </article>
             <article class="ofert-section__card lazy-loading  card col-11 col-md-11 mt-4 mb-3">
                 <img class="ofert-section__image lazy-image ofert-section__image--double card-img-top" data-src="images/footer/background.svg"
                     alt="">
-                <div class="card-body ofert-section__card-body text-center">
+                <div class="card-body ofert-section__card-body d-flex flex-column justify-content-between text-center">
                     <h4 class="ofert-section__header card-title">nagrobki pojedyncze</h4>
                     <p class="ofert-section__paragraph card-text">Lorem ipsum dolor sit amet consectetur adipisicing
                         elit. Deserunt a culpa
                         voluptate voluptas! Corrupti molestias recusandae non distinctio veniam ratione
                         exercitationem quibusdam, architecto fuga nam aliquam cum cumque, in quae!</p>
-                    <a href="#" class="ofert-section__btn btn-primary btn ">Zobacz ofertę</a>
+                    <a href="#" class="ofert-section__btn btn-primary btn align-self-md-center ">Zobacz ofertę</a>
                 </div>
             </article>
         </section>
@@ -135,7 +127,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer__section col-11 col-md-2 col-lg-2 ">
+            <div class="footer__section col-11 col-md-2 col-lg-2 " id="kontakt">
                 <header class="footer__heading  mb-2 mt-3 text-uppercase"> strony</header>
                 <div class="footer__body  ">
                     <a class="footer__link " rel=”noopener noreferrer” href="index.html">Strona główna</a><br />
