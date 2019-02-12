@@ -1,3 +1,8 @@
+document.getElementById("vid").addEventListener("loadeddata", ()=>{
+   for(let i = 0; i < document.getElementsByClassName("menu__list-cont").length; i++){
+       document.getElementsByClassName("menu__list-cont")[i].classList.remove("zero-opacity")
+   }
+})
 let menu = {
     isShowed: false,
     childNumber: null,
