@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('vid').play();
+    if (document.getElementById("vid") != undefined) {
+        document.getElementById('vid').play();
+    }
 })
 for (let i = 0; i < document.getElementsByClassName("link-smooth").length; i++) {
     document.getElementsByClassName("link-smooth")[i].addEventListener('click', function (e) {

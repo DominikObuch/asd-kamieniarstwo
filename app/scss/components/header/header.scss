@@ -21,7 +21,7 @@
 
     }
 
-    &__video {
+    &__video, &__image {
         width: 100vw;
         filter: brightness(50%) saturate(70%);
         z-index: 10;

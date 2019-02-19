@@ -46,7 +46,7 @@ for (let x = 0; x < sorting.list.length; x++) {
     sorting.list[x].addEventListener("click", function () {
         menu.toggle();
         for (let i = 0; i < articlesEl.length; i++) {
-            table[i] = [sorting.sortTypeSequence[x][i].textContent, articlesEl[i]]; 
+            table[i] = [sorting.sortTypeSequence[x][i].textContent, articlesEl[i]];
         }
         table.sort(sorting.comparingSequence[x]);
         for (let i = 0; i < table.length; i++) {
@@ -58,7 +58,8 @@ for (let x = 0; x < sorting.list.length; x++) {
     })
 }
 for (let i = 0; i < articlesEl.length; i++) {
-    articlesEl[i].addEventListener("animationend", function(){
-    table[i][1].classList.remove("fadeOutIn");
+    articlesEl[i].addEventListener("animationend", function () {
+        table[i][1].classList.remove("fadeOutIn");
     })
 }
+

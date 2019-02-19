@@ -1,0 +1,50 @@
+.zoomed {
+    width: 100vw;
+    height: 100vh;
+    z-index: 900;
+    background: rgba(40, 40, 40, 0.8);
+    top: 0;
+    left: 0;
+
+    &__cont {
+        width: 90%;
+        position: relative;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+    }
+
+    &__bar {
+
+        height: 3.6px;
+        border-radius: 100px;
+        background: black;
+        position: absolute;
+        cursor: pointer;
+        top: 0.7rem;
+        margin-left: .1rem;
+        width: 23px;
+
+        &--first {
+            transform: rotate(45deg);
+        }
+
+        &--second {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__exit {
+        width: 2rem;
+        height: 2rem;
+        background: $color-white;
+        transform: translateX(-2rem);
+        border-radius: 9999px;
+        border: 3px solid black;
+
+    }
+
+    &__image {
+        height: 70vh;
+    }
+}

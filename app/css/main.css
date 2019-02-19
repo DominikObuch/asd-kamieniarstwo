@@ -6965,14 +6965,14 @@ a.text-dark:hover, a.text-dark:focus {
   left: 0;
   background: rgba(255, 255, 255, 0.93); }
 
-.header__video {
+.header__video, .header__image {
   width: 100vw;
   filter: brightness(50%) saturate(70%);
   z-index: 10;
   position: relative;
   height: 100vh;
   object-fit: cover; }
-  .header__video-cont {
+  .header__video-cont, .header__image-cont {
     height: 100vh; }
 
 .header__heading {
@@ -7104,8 +7104,13 @@ ul {
   background: #F2F2F2; }
   @media (min-width: 768px) {
     .ofert-section {
-      background: url(/images/ofert/background1.jpg) no-repeat fixed center;
-      background-size: cover; } }
+      background-size: cover; }
+      .ofert-section--first {
+        background: url(/images/ofert/background1.jpg) no-repeat fixed center; }
+      .ofert-section--second {
+        background: url(/images/ofert/background2.jpg) no-repeat fixed center; }
+      .ofert-section--third {
+        background: url(/images/ofert/background3.jpg) no-repeat fixed center; } }
   .ofert-section__heading {
     font-size: 2rem;
     font-family: "Roboto", sans-serif;
@@ -7158,7 +7163,7 @@ ul {
   border-radius: 5px 5px 0 0;
   height: 10rem;
   padding: 0;
-  object-fit: cover; }
+  cursor: pointer; }
   @media (min-width: 768px) {
     .products__image {
       height: 21rem;
@@ -7227,6 +7232,42 @@ ul {
   100% {
     transform: translateY(0);
     opacity: 1; } }
+
+.zoomed {
+  width: 100vw;
+  height: 100vh;
+  z-index: 900;
+  background: rgba(40, 40, 40, 0.8);
+  top: 0;
+  left: 0; }
+  .zoomed__cont {
+    width: 90%;
+    position: relative;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%); }
+  .zoomed__bar {
+    height: 3.6px;
+    border-radius: 100px;
+    background: black;
+    position: absolute;
+    cursor: pointer;
+    top: 0.7rem;
+    margin-left: .1rem;
+    width: 23px; }
+    .zoomed__bar--first {
+      transform: rotate(45deg); }
+    .zoomed__bar--second {
+      transform: rotate(-45deg); }
+  .zoomed__exit {
+    width: 2rem;
+    height: 2rem;
+    background: #FDFDFD;
+    transform: translateX(-2rem);
+    border-radius: 9999px;
+    border: 3px solid black; }
+  .zoomed__image {
+    height: 70vh; }
 
 .lazy-loading {
   opacity: 0;
