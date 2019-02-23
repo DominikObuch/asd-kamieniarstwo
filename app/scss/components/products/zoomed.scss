@@ -4,25 +4,25 @@
     z-index: 900;
     background: rgba(40, 40, 40, 0.8);
     top: 0;
+    opacity: 1;
     left: 0;
+    transition: .4s opacity;
+    
 
     &__cont {
-        width: 90%;
         position: relative;
-        top: 50%;
-        left: 5%;
+        top: 55%;
         transform: translateY(-50%);
     }
 
     &__bar {
-
-        height: 3.6px;
-        border-radius: 100px;
+        
+        height: .25rem;
         background: black;
         position: absolute;
         cursor: pointer;
-        top: 0.7rem;
-        margin-left: .1rem;
+        top: .8rem;
+        right: .28rem;
         width: 23px;
 
         &--first {
@@ -35,16 +35,26 @@
     }
 
     &__exit {
-        width: 2rem;
-        height: 2rem;
-        background: $color-white;
-        transform: translateX(-2rem);
+        position: absolute;
+        right: 1rem;
+        top: 0rem;
+        width: 1.9rem;
+        height: 1.9rem;
+        background: white;
         border-radius: 9999px;
-        border: 3px solid black;
+        @include media-breakpoint-up(md) { 
+            width: 0;
+            position: relative;
+            right: 0;
+        }
 
     }
 
     &__image {
         height: 70vh;
     }
+}
+.no-zoom{
+    opacity: 0;
+    z-index: -1;
 }
