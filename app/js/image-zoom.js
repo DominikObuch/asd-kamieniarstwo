@@ -4,7 +4,7 @@ let zoomed = {
     appearZoom(el){
         console.log(this)
         
-        this.currentImgSrc = el.target.dataset.src;
+        this.currentImgSrc = el.target.src;
         this.zoomEl.childNodes[1].childNodes[1].src = this.currentImgSrc;
         this.zoomEl.classList.remove("no-zoom");
     },
