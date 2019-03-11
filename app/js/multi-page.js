@@ -68,7 +68,8 @@ let pages = {
 }
 
 let switchSiteEl = document.getElementsByClassName("switchSite")
-function animSwitchSite(i){
+
+function animSwitchSite(i) {
 
     for (let i = 0; i < document.getElementsByClassName("products__card").length; i++) {
         document.getElementsByClassName("products__card")[i].classList.add("reload-page");
@@ -95,12 +96,12 @@ function animSwitchSite(i){
 for (let i = 0; i < switchSiteEl.length; i++) {
     switchSiteEl[i].addEventListener("click", function () {
         animSwitchSite(i)
-       
+
     })
 }
 let nextPageEl = document.getElementById("nextPage");
 nextPageEl.addEventListener("click", () => { // it goes to next page of products
- animSwitchSite()
+    animSwitchSite()
     nextPages();
 
 })
@@ -136,6 +137,12 @@ let prevPages = (amount = -1) => {
 
 //this function adds or minus numbers from the menu section
 function switchingNumbers(char) { //this argument can be -1 or 1, -1 means prev page and 1 means next page
+    console.log("first case: " + pages.currentPage == 1 || (pages.currentPage == 2 && char == -1),
+        "second case: " + pages.currentPage + char + 2 >= Math.ceil(pages.data.length / pages.containersEl.length) || char >= pages.currentPage,
+        "third case: " + pages.currentPage + char > Math.ceil(pages.data.length / pages.containersEl.length) - 2,
+        char, pages.currentPage
+
+    )
 
     if (pages.currentPage == 1 || (pages.currentPage == 2 && char == -1)) { //checks if are u on first site or want to go there
         for (let i = 0; i < 2; i++) {
@@ -149,25 +156,82 @@ function switchingNumbers(char) { //this argument can be -1 or 1, -1 means prev 
             }
         }
     } else if (pages.currentPage + char + 2 >= Math.ceil(pages.data.length / pages.containersEl.length) || char >= pages.currentPage) {
-        
         document.getElementsByClassName("products__list-point")[--document.getElementsByClassName("products__list-point").length].classList.add("d-none")
         document.getElementsByClassName("products__list-point")[document.getElementsByClassName("products__list-point").length -= 2].classList.add("d-none")
-        if (true) {
-            let current;
-            for (let i = 0; i < document.getElementsByClassName("changeNumber").length; i++) {
 
-                if (document.getElementsByClassName("changeNumber")[i].classList.contains("text-danger")) {
-                    current = i; // it cholds the number of the active element 
-                }
+        let current;
+        for (let i = 0; i < document.getElementsByClassName("changeNumber").length; i++) {
+
+            if (document.getElementsByClassName("changeNumber")[i].classList.contains("text-danger")) {
+                current = i; // it cholds the number of the active element 
+            }
+
+        }
+        // when only 2 pages remaining and u clicked the last or the one before last  
+        if ((pages.currentPage + char > Math.ceil(pages.data.length / pages.containersEl.length) - 2) || (pages.currentPage + char > Math.ceil(pages.data.length / pages.containersEl.length))) {
+
+            if (char < 0) {
+
+                char++;
+            }
+            if (pages.currentPage == Math.ceil(pages.data.length / pages.containersEl.length)) {
+
+                document.getElementsByClassName("changeNumber")[current].classList.toggle("text-danger")
+                document.getElementsByClassName("changeNumber")[current - 1].classList.toggle("text-danger")
+                char--;
+            } else {
+                document.getElementsByClassName("changeNumber")[current].classList.toggle("text-danger")
+                document.getElementsByClassName("changeNumber")[current + char].classList.toggle("text-danger")
+                char++
 
             }
-            console.log(document.getElementsByClassName("changeNumber")[current], char)
-        }
-        for (let i = 0; i < document.getElementsByClassName("changeNumber").length; i++) {
-            document.getElementsByClassName("changeNumber")[i].textContent = +document.getElementsByClassName("changeNumber")[i].textContent + char;
+
+        } //when u clicked 3 from the end
+        else {
+            for (let i = 0; i < document.getElementsByClassName("changeNumber").length; i++) {
+                document.getElementsByClassName("changeNumber")[i].textContent = +document.getElementsByClassName("changeNumber")[i].textContent + char;
+            }
+
         }
 
-    } else {
+    } else { //it starts when u leave the lasts of the pages  
+        for (let i = 0; i < document.getElementsByClassName("changeNumber").length; i++) {
+            if (document.getElementsByClassName("changeNumber")[i].classList.contains("text-danger")) {
+                current = i; //it cholds the number of the active element 
+                if (document.getElementsByClassName("changeNumber")[current] == document.getElementsByClassName("changeNumber")[i]) {
+                    diff = i;
+
+                }
+            }
+
+        }
+
+        for (let i = 0; i < document.getElementsByClassName("changeNumber").length; i++) {
+
+        }
+        for (let i = 0; i < document.getElementsByClassName("changeNumber").length; i++) {
+            document.getElementsByClassName("changeNumber")[i].classList.remove("text-danger");
+
+        }
+        document.getElementsByClassName("changeNumber")[1].classList.add("text-danger")
+
+        if (pages.currentPage == Math.ceil(pages.data.length / pages.containersEl.length)) {
+            char -= 2;
+           
+        }
+        if (pages.currentPage == Math.ceil(pages.data.length / pages.containersEl.length) - 1) {
+           
+            if (char == -2) {
+                char++
+            } else {
+
+            }
+
+        }
+        if (pages.currentPage == Math.ceil(pages.data.length / pages.containersEl.length)) {
+
+        }
+
         document.getElementsByClassName("products__list-point")[--document.getElementsByClassName("products__list-point").length].classList.remove("d-none")
         document.getElementsByClassName("products__list-point")[document.getElementsByClassName("products__list-point").length -= 2].classList.remove("d-none")
         for (let i = 0; i < document.getElementsByClassName("changeNumber").length; i++) {
