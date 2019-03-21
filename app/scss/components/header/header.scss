@@ -11,6 +11,15 @@
     &__button {
         outline: none !important;
 
+        &--link {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            z-index: 20;
+            transform: translate(-50%, -50%);
+            color: $color-light;
+            font-family: $font-decorative;
+        }
     }
 
 
@@ -21,7 +30,8 @@
 
     }
 
-    &__video, &__image {
+    &__video,
+    &__image {
         width: 100vw;
         filter: brightness(50%) saturate(70%);
         z-index: 10;

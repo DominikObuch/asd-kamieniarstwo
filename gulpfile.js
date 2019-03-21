@@ -37,6 +37,10 @@ gulp.task('images', () => {
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg|mp4|webm)')
     .pipe(gulp.dest('docs/images'))
 });
+gulp.task('dataJSON', () => {
+  return gulp.src('app/js/**/*.json)')
+    .pipe(gulp.dest('docs'))
+});
 
 gulp.task('watch', ['browserSync', 'sass'], () => {
   gulp.watch('app/scss/**/*.scss', ['sass']);
@@ -44,16 +48,15 @@ gulp.task('watch', ['browserSync', 'sass'], () => {
   gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
-
-
 gulp.task("uncss", function () {
   return gulp.src([
       'app/css/main.css'
     ])
     .pipe(uncss({
-      
+
       html: [
-        'app/index.html'
+        'app/*.html',
+        'app/**/*.html'
       ],
       ignore: [
         /\.lazy-loaded/,
@@ -68,22 +71,20 @@ gulp.task("uncss", function () {
 })
 
 gulp.task('useref', () => {
-  return gulp.src('app/*.html')
+  return gulp.src(['app/*.html'], )
     .pipe(useref())
-    .pipe(gulpIf('index.js',  
+    .pipe(gulpIf('*.js',
       babel({
         presets: ['@babel/env']
       })
-     ))
+    ))
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulpIf("*.html", htmlmin({
+    .pipe(gulpIf("app/*.html", htmlmin({
       collapseWhitespace: true,
-       conservativeCollapse: true
-      })))
+      conservativeCollapse: true
+    })))
     .pipe(gulp.dest('docs'))
 });
-
-
 
 gulp.task('scripts', () => {
   return gulp.src(['app/js/*.js'])
@@ -97,7 +98,7 @@ gulp.task('scripts', () => {
 })
 
 gulp.task('minifyhtml', () => {
-  return gulp.src('app/*.html')
+  return gulp.src('app/**/*.html')
     .pipe(htmlmin({
       collapseWhitespace: true,
       conservativeCollapse: true
@@ -125,6 +126,6 @@ gulp.task('default', function (callback) {
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:docs', ['sass', 'images'], 'prefixer', 'uncss','useref', 
+  runSequence('clean:docs', ['sass', 'images'], 'prefixer', 'uncss', 'useref','dataJSON',
     callback)
 })

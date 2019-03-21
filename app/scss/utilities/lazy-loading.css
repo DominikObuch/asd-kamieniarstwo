@@ -1,0 +1,18 @@
+.lazy-loading {
+  opacity: 0;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+}
+
+.lazy-loaded {
+  -webkit-transition: 1.1s opacity, 1.1s -webkit-transform;
+  transition: 1.1s opacity, 1.1s -webkit-transform;
+  transition: 1.1s transform, 1.1s opacity;
+  transition: 1.1s transform, 1.1s opacity, 1.1s -webkit-transform;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+/*# sourceMappingURL=lazy-loading.css.map */

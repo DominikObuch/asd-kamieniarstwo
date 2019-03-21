@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACV,OAAO,EAAE,CAAC;EACV,SAAS,EAAE,eAAe;CAC7B;;AAED,AAAA,YAAY,CAAC;EACT,UAAU,EAAE,4BAA4B;EACxC,0BAA0B,EAAE,QAAQ;EACpC,SAAS,EAAE,aAAa;EACxB,OAAO,EAAE,CAAC;CACb",
+    "sources": [
+        "lazy-loading.scss"
+    ],
+    "names": [],
+    "file": "lazy-loading.css"
+}

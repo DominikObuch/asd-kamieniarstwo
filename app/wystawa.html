@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ASD Kamieniarstwo</title>
     <!-- build:css css/main.min.css-->
-    <link href="css/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
     <!-- endbuild-->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,900|Roboto|Ubuntu" rel="stylesheet">
 </head>
@@ -19,7 +19,8 @@
 
             <nav class="  header__nav col-12 position-fixed w-100 navbar navbar-expand-lg navbar-light ">
 
-                <a class="navbar-brand" href="/index.html"> <img src="images/header/logo.svg" class="header__logo" alt="">
+                <a class="navbar-brand" href="./index.html"> <img src="images/header/logo.svg" class="header__logo"
+                        alt="">
                 </a>
                 <button id="hamburger" class="header__button border-0 navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -38,7 +39,7 @@
                         </li>
                         <div class="dropdown-divider"></div>
                         <li class="nav-item mr-lg-4 active  ">
-                            <a class="nav-link" href="/oferta.html">Oferta </a>
+                            <a class="nav-link" href="./oferta.html">Oferta </a>
                         </li>
 
                         <div class="dropdown-divider"></div>
@@ -58,154 +59,325 @@
 
         </header>
         <!-- HEADER END -->
+
         <!-- PRODUCTS START -->
-        <section >
-        <div class="row zindex  bg-light justify-content-between">
+        <section>
+            <div id="scroll-top" class="row zindex  bg-light justify-content-between">
                 <div class="menu  py-4 position-relative  col-5 " id="menu-headstones">Nagrobki
                     <img class="menu__arrow" src="images/products/_ionicons_svg_md-arrow-dropdown (1).svg">
                 </div>
-                
+                <div class="menu  py-4 position-relative text-right col-5 " id="menu-sort">Sortuj
+                    <img class="menu__arrow" src="images/products/_ionicons_svg_md-arrow-dropdown (1).svg">
+                </div>
             </div>
             <div class="menu__list-cont zero-opacity position-absolute ">
-                    <ul class="menu__list " >
-                        <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href=""> <img class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt=""> Nagrobki pojedyńcze</a></li>
-                        <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href=""> <img class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt=""> Nagrobki podwójne</a></li>
-                        <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href=""> <img class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt=""> Nagrobki urnowe</a></li>
-                        <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href=""> <img class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt=""> Nagrobki dziecięce</a></li>
-                    </ul>
-                </div>
-                
+                <ul class="menu__list ">
+                    <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href=""> <img class="menu__arrow--right"
+                                src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt=""> Nagrobki pojedyńcze</a></li>
+                    <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href=""> <img class="menu__arrow--right"
+                                src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt=""> Nagrobki podwójne</a></li>
+                    <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href=""> <img class="menu__arrow--right"
+                                src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt=""> Nagrobki urnowe</a></li>
+                    <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href=""> <img class="menu__arrow--right"
+                                src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt=""> Nagrobki dziecięce</a></li>
+                </ul>
+            </div>
+            <div class="menu__list-cont zero-opacity position-absolute ">
+                <ul class="menu__list " id="menu-">
+                    <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="priceIncreasing">
+                        <img class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt="">
+                        cena: od najniższej</li>
+                    <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="priceDecreasing">
+                        <img class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt="">
+                        cena: od najwyższej</li>
+                    <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="alphabeticallyCategories">
+                        <img class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt="">
+                        rodzaj granitu: alfabetycznie</li>
+                    <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="widthest"> <img
+                            class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt="">
+                        szerokość: najszersze</li>
+                    <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="narrowest"> <img
+                            class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt="">
+                        szerokość: najwęższe</li>
+                    <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="heighest"> <img
+                            class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt="">
+                        długość: najdłuższe</li>
+                    <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="shortest"> <img
+                            class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt="">
+                        długość: najkrótsze</li>
+                </ul>
+            </div>
         </section>
-        <section class="row">
-            
-            <article class="products__card order-2 align-items-center row m-4 justify-content-between  lazy-loading">
+        <section>
+            <article class="products__card  align-items-center row my-4 mx-2 justify-content-between lazy-loading">
 
-                <img class="products__image col-md-7 col-12 lazy-image" data-src="images/ofert/background5.jpg" alt="">
-                <div class="products__body align-content-center col-12 justify-content-center col-md-5 text-center">
-                    <h3 class="products__heading py-2 text-center">N6 </h3>
+                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <div class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
+                    <h3 class="products__heading py-2 text-center">
+                        <!-- name-->
+                    </h3>
 
                     <div class="font-weight-bold">Kategoria:</div>
-                    <div class="d-category">nagrobki pojedyńcze</div>
+                    <div class="d-category">
+                        <!-- category -->
+                    </div>
 
                     <div class="font-weight-bold mt-3">Opis:</div>
-                    <div> Rodzaj granitu: <span class="d-granite">Dddd</span></div>
-                    <div>Wymiary: <span class="d-width">200</span> x <span class="d-height">200</span> cm </div>
+                    <div> Rodzaj granitu: <span class="d-granite">
+                            <!-- granite type--></span></div>
+
+                    <div>Wymiary: <span class="d-width">
+                            <!-- widht--></span> x <span class="d-height">
+                            <!-- height--></span> cm </div>
+
                     <div class="products__price text-center mt-3">
-                        Cena: <span class="d-price">5000</span> zł
+                        Cena: <span class="d-price">
+                            <!-- price--></span> zł
                     </div>
                 </div>
             </article>
-            <article class="products__card align-items-center row m-4 justify-content-between  lazy-loading">
 
-                <img class="products__image col-md-7 col-12 lazy-image" data-src="images/ofert/background5.jpg" alt="">
-                <div class="products__body align-content-center col-12 justify-content-center col-md-5 text-center">
-                    <h3 class="products__heading py-2 text-center">N6 </h3>
+            <article class="products__card  align-items-center row my-4 mx-2 justify-content-between lazy-loading">
+
+                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <div class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
+                    <h3 class="products__heading py-2 text-center">
+                        <!-- name-->
+                    </h3>
 
                     <div class="font-weight-bold">Kategoria:</div>
-                    <div class="d-category">nagrobki pojedyńcze</div>
+                    <div class="d-category">
+                        <!-- category -->
+                    </div>
 
                     <div class="font-weight-bold mt-3">Opis:</div>
-                    <div> Rodzaj granitu: <span class="d-granite">CCC</span></div>
-                    <div>Wymiary: <span class="d-width">100</span> x <span class="d-height">2100</span> cm </div>
+                    <div> Rodzaj granitu: <span class="d-granite">
+                            <!-- granite type--></span></div>
+
+                    <div>Wymiary: <span class="d-width">
+                            <!-- widht--></span> x <span class="d-height">
+                            <!-- height--></span> cm </div>
+
                     <div class="products__price text-center mt-3">
-                        Cena: <span class="d-price">1000</span> zł
+                        Cena: <span class="d-price">
+                            <!-- price--></span> zł
                     </div>
                 </div>
             </article>
-            <article class="products__card align-items-center row m-4 justify-content-between  lazy-loading">
+            <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
 
-                <img class="products__image col-md-7 col-12 lazy-image" data-src="images/ofert/background5.jpg" alt="">
-                <div class="products__body align-content-center col-12 justify-content-center col-md-5 text-center">
-                    <h3 class="products__heading py-2 text-center">N6 </h3>
+                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <div class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
+                    <h3 class="products__heading py-2 text-center">
+                        <!-- name-->
+                    </h3>
 
                     <div class="font-weight-bold">Kategoria:</div>
-                    <div class="d-category">nagrobki pojedyńcze</div>
+                    <div class="d-category">
+                        <!-- category -->
+                    </div>
 
                     <div class="font-weight-bold mt-3">Opis:</div>
-                    <div> Rodzaj granitu: <span class="d-granite">zzz</span></div>
-                    <div>Wymiary: <span class="d-width">1400</span> x <span class="d-height">2500</span> cm </div>
+                    <div> Rodzaj granitu: <span class="d-granite">
+                            <!-- granite type--></span></div>
+
+                    <div>Wymiary: <span class="d-width">
+                            <!-- widht--></span> x <span class="d-height">
+                            <!-- height--></span> cm </div>
+
                     <div class="products__price text-center mt-3">
-                        Cena: <span class="d-price">6000</span> zł
+                        Cena: <span class="d-price">
+                            <!-- price--></span> zł
                     </div>
                 </div>
             </article>
-            <article class="products__card align-items-center row m-4 justify-content-between  lazy-loading">
+            <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
 
-                <img class="products__image col-md-7 col-12 lazy-image" data-src="images/ofert/background5.jpg" alt="">
-                <div class="products__body align-content-center col-12 justify-content-center col-md-5 text-center">
-                    <h3 class="products__heading py-2 text-center">N6 </h3>
+                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <div class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
+                    <h3 class="products__heading py-2 text-center">
+                        <!-- name-->
+                    </h3>
 
                     <div class="font-weight-bold">Kategoria:</div>
-                    <div class="d-category">nagrobki pojedyńcze</div>
+                    <div class="d-category">
+                        <!-- category -->
+                    </div>
 
                     <div class="font-weight-bold mt-3">Opis:</div>
-                    <div> Rodzaj granitu: <span class="d-granite">BBB</span></div>
-                    <div>Wymiary: <span class="d-width">1200</span> x <span class="d-height">2200</span> cm </div>
+                    <div> Rodzaj granitu: <span class="d-granite">
+                            <!-- granite type--></span></div>
+
+                    <div>Wymiary: <span class="d-width">
+                            <!-- widht--></span> x <span class="d-height">
+                            <!-- height--></span> cm </div>
+
                     <div class="products__price text-center mt-3">
-                        Cena: <span class="d-price">6000</span> zł
+                        Cena: <span class="d-price">
+                            <!-- price--></span> zł
                     </div>
                 </div>
             </article>
-            <article class="products__card align-items-center row m-4 justify-content-between  lazy-loading">
+            <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
 
-                <img class="products__image col-md-7 col-12 lazy-image" data-src="images/ofert/background5.jpg" alt="">
-                <div class="products__body align-content-center col-12 justify-content-center col-md-5 text-center">
-                    <h3 class="products__heading py-2 text-center">N6 </h3>
+                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <div class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
+                    <h3 class="products__heading py-2 text-center">
+                        <!-- name-->
+                    </h3>
 
                     <div class="font-weight-bold">Kategoria:</div>
-                    <div class="d-category">nagrobki pojedyńcze</div>
+                    <div class="d-category">
+                        <!-- category -->
+                    </div>
 
                     <div class="font-weight-bold mt-3">Opis:</div>
-                    <div> Rodzaj granitu: <span class="d-granite">Impala</span></div>
-                    <div>Wymiary: <span class="d-width">10</span> x <span class="d-height">10</span> cm </div>
+                    <div> Rodzaj granitu: <span class="d-granite">
+                            <!-- granite type--></span></div>
+
+                    <div>Wymiary: <span class="d-width">
+                            <!-- widht--></span> x <span class="d-height">
+                            <!-- height--></span> cm </div>
+
                     <div class="products__price text-center mt-3">
-                        Cena: <span class="d-price">61000</span> zł
+                        Cena: <span class="d-price">
+                            <!-- price--></span> zł
                     </div>
                 </div>
             </article>
-            <article class="products__card align-items-center row m-4 justify-content-between  lazy-loading">
+            <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
 
-                <img class="products__image col-md-7 col-12 lazy-image" data-src="images/ofert/background5.jpg" alt="">
-                <div class="products__body align-content-center col-12 justify-content-center col-md-5 text-center">
-                    <h3 class="products__heading py-2 text-center">N6 </h3>
+                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <div class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
+                    <h3 class="products__heading py-2 text-center">
+                        <!-- name-->
+                    </h3>
 
                     <div class="font-weight-bold">Kategoria:</div>
-                    <div class="d-category">nagrobki pojedyńcze</div>
+                    <div class="d-category">
+                        <!-- category -->
+                    </div>
 
                     <div class="font-weight-bold mt-3">Opis:</div>
-                    <div> Rodzaj granitu: <span class="d-granite">Impala</span></div>
-                    <div>Wymiary: <span class="d-width">100</span> x <span class="d-height">200</span> cm </div>
+                    <div> Rodzaj granitu: <span class="d-granite">
+                            <!-- granite type--></span></div>
+
+                    <div>Wymiary: <span class="d-width">
+                            <!-- widht--></span> x <span class="d-height">
+                            <!-- height--></span> cm </div>
+
                     <div class="products__price text-center mt-3">
-                        Cena: <span class="d-price">100</span> zł
+                        Cena: <span class="d-price">
+                            <!-- price--></span> zł
                     </div>
                 </div>
             </article>
-            <article class="products__card align-items-center row m-4 justify-content-between  lazy-loading">
+            <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
 
-                <img class="products__image col-md-7 col-12 lazy-image" data-src="images/ofert/background5.jpg" alt="">
-                <div class="products__body align-content-center col-12 justify-content-center col-md-5 text-center">
-                    <h3 class="products__heading py-2 text-center">N6 </h3>
+                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <div class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
+                    <h3 class="products__heading py-2 text-center">
+                        <!-- name-->
+                    </h3>
 
                     <div class="font-weight-bold">Kategoria:</div>
-                    <div class="d-category">nagrobki pojedyńcze</div>
+                    <div class="d-category">
+                        <!-- category -->
+                    </div>
+
                     <div class="font-weight-bold mt-3">Opis:</div>
-                    <div> Rodzaj granitu: <span class="d-granite">Impala</span></div>
-                    <div>Wymiary: <span class="d-width">100</span> x <span class="d-height">200</span> cm </div>
+                    <div> Rodzaj granitu: <span class="d-granite">
+                            <!-- granite type--></span></div>
+
+                    <div>Wymiary: <span class="d-width">
+                            <!-- widht--></span> x <span class="d-height">
+                            <!-- height--></span> cm </div>
+
                     <div class="products__price text-center mt-3">
-                        Cena: <span class="d-price">36000</span> zł
+                        Cena: <span class="d-price">
+                            <!-- price--></span> zł
                     </div>
                 </div>
             </article>
+            <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
+
+                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <div class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
+                    <h3 class="products__heading py-2 text-center">
+                        <!-- name-->
+                    </h3>
+
+                    <div class="font-weight-bold">Kategoria:</div>
+                    <div class="d-category">
+                        <!-- category -->
+                    </div>
+
+                    <div class="font-weight-bold mt-3">Opis:</div>
+                    <div> Rodzaj granitu: <span class="d-granite">
+                            <!-- granite type--></span></div>
+
+                    <div>Wymiary: <span class="d-width">
+                            <!-- widht--></span> x <span class="d-height">
+                            <!-- height--></span> cm </div>
+
+                    <div class="products__price text-center mt-3">
+                        Cena: <span class="d-price">
+                            <!-- price--></span> zł
+                    </div>
+                </div>
+            </article>
+            <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
+
+                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <div class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
+                    <h3 class="products__heading py-2 text-center">
+                        <!-- name-->
+                    </h3>
+
+                    <div class="font-weight-bold">Kategoria:</div>
+                    <div class="d-category">
+                        <!-- category -->
+                    </div>
+
+                    <div class="font-weight-bold mt-3">Opis:</div>
+                    <div> Rodzaj granitu: <span class="d-granite">
+                            <!-- granite type--></span></div>
+
+                    <div>Wymiary: <span class="d-width">
+                            <!-- widht--></span> x <span class="d-height">
+                            <!-- height--></span> cm </div>
+
+                    <div class="products__price text-center mt-3">
+                        Cena: <span class="d-price">
+                            <!-- price--></span> zł
+                    </div>
+                </div>
+            </article>
+            <div id="wrapper" class="col-12 mb-3 mt-3">
+                <div class="list-unstyled flex-row d-flex justify-content-center justify-content-md-end  ">
+                    <div id="pagination-cont" class="d-flex flex-row"></div>
+                </div>
+            </div>
 
         </section>
 
         <!-- PRODUCTS END -->
+        <div id="zoomEl" class="position-fixed no-zoom zoomed justify-content-center">
+            <div class="zoomed__cont row justify-content-center">
+                <img class="zoomed__image" src="images/ofert/single.jpg" alt="">
+                <div class="zoomed__exit ">
+                    <span class="zoomed__bar zoomed__bar--first"></span>
+                    <span class="zoomed__bar zoomed__bar--second"></span>
 
+                </div>
+            </div>
+        </div>
         <!-- FOOTER START -->
-        <footer class="row footer pt-5 justify-content-center pb-5">
+        <footer class="row footer pt-5 justify-content-center pb-5 m-0">
             <div class="footer__section col-11 col-md-3 col-lg-2">
                 <header class="footer__heading mb-2 mt-3"><img src="images/footer/logo.svg"></header>
-                <p class="footer__body mt-3">ASD Kamieniarstwo to firma kamieniarska której to wieloletnie utrzymanie
+                <p class="footer__body mt-3">ASD Kamieniarstwo to firma kamieniarska której to wieloletnie
+                    utrzymanie
                     się na rynku tylko
                     utwierdza w przekonaniu, że trafili państwo na odpowiednią firmę.</p>
             </div>
@@ -232,8 +404,8 @@
             <div class="footer__section col-11 col-md-2 col-lg-2 " id="kontakt">
                 <header class="footer__heading  mb-2 mt-3 text-uppercase"> strony</header>
                 <div class="footer__body  ">
-                    <a class="footer__link " rel=”noopener noreferrer” href="/index.html">Strona główna</a><br />
-                    <a class="footer__link " rel=”noopener noreferrer” href="/oferta.html">Oferta</a><br />
+                    <a class="footer__link " rel=”noopener noreferrer” href="./index.html">Strona główna</a><br />
+                    <a class="footer__link " rel=”noopener noreferrer” href="./oferta.html">Oferta</a><br />
                     <a class="footer__link mb-5 " rel=”noopener noreferrer” href="nagrobki.html">Nagrobki</a>
                     <div>
                         <a rel=”noopener noreferrer” target="_blank" href="https://www.facebook.com/ASD-Kamieniarstwo-795802100586510/"
@@ -253,6 +425,7 @@
         </footer>
         <!-- FOOTER END -->
 
+
     </div>
 
 
@@ -269,10 +442,13 @@
 
     <!-- build:js js/script.min.js -->
     <script type="text/javascript" src="js/index.js"></script>
+    <script async type="text/javascript" src="https://pagination.js.org/dist/2.1.4/pagination.min.js"> </script>
     <script type="text/javascript" src="js/hamburger.js"></script>
     <script type="text/javascript" src="js/lazy-loading.js"></script>
+    <script type="text/javascript" src="js/multi-page.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
-
+    <script type="text/javascript" src="js/sort.js"></script>
+    <script type="text/javascript" src="js/image-zoom.js" await></script>
     <!-- endbuild -->
 </body>
 

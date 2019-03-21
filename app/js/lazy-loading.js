@@ -24,8 +24,6 @@ let lazyLoadingImg = (imgEl, contEl) => {
 
     }
 }
-
-
 var scroll = function () {
 
     lazyLoadingAnim(lazyLoadingEl);

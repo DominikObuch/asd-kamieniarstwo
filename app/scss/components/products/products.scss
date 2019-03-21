@@ -4,7 +4,7 @@
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
         border-radius: 5px;
         transform: 1s all;
-        
+
     }
 
     &__image {
@@ -42,18 +42,39 @@
     }
 
     &__list-point {
+        display: flex;
+        flex-direction: row;
         text-decoration: underline;
         line-height: 25px;
+        justify-content: center;
         cursor: pointer;
+        @include media-breakpoint-up(md) {
+            justify-content: end;
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
+            width: 2rem;
+            list-style: none;
+        }
 
         &--dots,
         &--active {
             text-decoration: none;
-            cursor:auto;
+            cursor: auto;
         }
 
         &--active {
             text-decoration: none;
         }
+    }
+}
+
+#wrapper {
+    padding: 0;
+
+    ul {
+        padding: 0;
     }
 }
