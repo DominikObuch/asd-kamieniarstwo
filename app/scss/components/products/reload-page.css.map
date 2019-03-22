@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACT,cAAc,EAAE,WAAW;EAC3B,kBAAkB,EAAE,IAAI;EACxB,yBAAyB,EAAE,OAAO;CAAE;;AACxC,UAAU,CAAV,WAAU;EACN,EAAE;IACE,OAAO,EAAE,CAAC;;EAEd,GAAG;IACC,OAAO,EAAE,CAAC;;EAEd,IAAI;IACA,OAAO,EAAE,CAAC",
+    "sources": [
+        "reload-page.scss"
+    ],
+    "names": [],
+    "file": "reload-page.css"
+}

@@ -1,0 +1,60 @@
+.zoomed {
+    width: 100vw;
+    height: 100vh;
+    z-index: 900;
+    background: rgba(40, 40, 40, 0.8);
+    top: 0;
+    opacity: 1;
+    left: 0;
+    transition: .4s opacity;
+    
+
+    &__cont {
+        position: relative;
+        top: 55%;
+        transform: translateY(-50%);
+    }
+
+    &__bar {
+        
+        height: .25rem;
+        background: black;
+        position: absolute;
+        cursor: pointer;
+        top: .8rem;
+        right: .28rem;
+        width: 23px;
+
+        &--first {
+            transform: rotate(45deg);
+        }
+
+        &--second {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__exit {
+        position: absolute;
+        right: 1rem;
+        top: 0rem;
+        width: 1.9rem;
+        height: 1.9rem;
+        background: white;
+        border-radius: 9999px;
+        @include media-breakpoint-up(md) { 
+            width: 0;
+            position: relative;
+            right: 0;
+        }
+
+    }
+
+    &__image {
+        height: 70vh;
+    }
+}
+.no-zoom{
+    opacity: 0;
+    z-index: -1;
+}

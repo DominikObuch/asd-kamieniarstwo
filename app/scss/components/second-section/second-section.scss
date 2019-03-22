@@ -1,0 +1,70 @@
+.second-section {
+    background: url("../images/second-section/background.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 80%;
+    background-color: $color-light;
+    &__paragraph {
+        color: $color-black;
+        font-family: $font-primary;
+        font-size: $font-size - 0.1rem;
+        background: $color-light;
+        border-radius: 0 0 20px 20px;
+
+        &-cont {
+
+            &--first {
+                height: 16.5rem;
+            }
+
+            &--second {
+                height: 10rem;
+            }
+
+            &--third {
+                height: 8.5rem;
+            }
+            @include media-breakpoint-up(sm) {
+                height: 10rem;
+            }
+            @include media-breakpoint-up(md) {
+                height: 17rem;
+            }   
+            @include media-breakpoint-up(lg) { 
+                height: 16rem;
+            }
+            @include media-breakpoint-up(xl) {
+                height: 15rem;
+            }
+        }
+
+    }
+
+    &__title {
+        color: $color-black;
+        font-weight: 500;
+        height: 7rem;
+        font-family: $font-primary;
+        border-bottom: 1px solid #797979;
+    }
+
+    &__image {
+        border-radius: 13px 13px 0 0;
+        height: 13rem;
+        object-fit: cover;
+        @include media-breakpoint-up(sm) {
+            height:20rem;
+        }
+        @include media-breakpoint-up(lg) {
+            height:13rem;
+        }
+    }
+}
+
+.card {
+    border-radius: 15px;
+    border: 2px solid #0E426D;
+
+}
+

@@ -1,0 +1,75 @@
+.ofert-section {
+    background: $color-light;
+
+
+    @include media-breakpoint-up(md) {
+        background-size: cover;
+        &--first{
+            background: url(../images/ofert/background1.jpg) no-repeat fixed center;
+            
+        }
+        &--second{
+            background: url(../images/ofert/background2.jpg) no-repeat fixed center;
+            
+        }
+
+        &--third{
+            background: url(../images/ofert/background3.jpg) no-repeat fixed center;
+            
+        }
+        
+    }
+
+    &__heading {
+        font-size: $font-size + 1rem;
+        font-family: $font-secondary;
+        margin: 0;
+        background: rgba(13, 19, 33, 0.9);
+    }
+
+    &__image {
+        border-radius: 11px 11px 0 0;
+        object-fit: cover;
+        width: 100%;
+       
+
+        &--double {
+            height: 12rem;
+
+            @include media-breakpoint-up(sm) {
+                height: 19rem;
+            }
+        }
+    }
+
+    &__card-body {
+        background: transparent;
+    }
+
+    &__paragraph {
+        font-family: $font-primary;
+        font-size: $font-size;
+    }
+
+    &__header {
+        font-family: $font-primary;
+        font-weight: bold;
+
+    }
+
+    &__card {
+        box-shadow: 1px 1px 13px 0px rgba(0,0,0,0.75);
+        background: rgba(255, 255, 255, 0.8);
+        padding: 0;
+        border: none;
+        @include media-breakpoint-up(md) {
+            box-shadow: none;
+        }
+
+    }
+
+    &__btn {
+        font-family: $font-secondary;
+
+    }
+}

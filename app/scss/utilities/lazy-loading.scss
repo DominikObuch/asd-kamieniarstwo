@@ -1,0 +1,11 @@
+.lazy-loading {
+    opacity: 0;
+    transform: translateY(20%);
+}
+
+.lazy-loaded {
+    transition: 1.1s transform, 1.1s opacity;
+    transition-timing-function: ease-out;
+    transform: translateY(0);
+    opacity: 1;
+}
