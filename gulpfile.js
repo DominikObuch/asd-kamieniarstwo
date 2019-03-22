@@ -12,6 +12,106 @@ var htmlmin = require('gulp-htmlmin');
 var uncss = require('gulp-uncss');
 var sourcemaps = require('gulp-sourcemaps');
 var babel = require('gulp-babel');
+var realFavicon = require('gulp-real-favicon');
+var fs = require('fs');
+var uglify = require('gulp-uglify');
+var pipeline = require('readable-stream').pipeline;
+// File where the favicon markups are stored
+var FAVICON_DATA_FILE = 'faviconData.json';
+
+// Generate the icons. This task takes a few seconds to complete.
+// You should run it at least once to create the icons. Then,
+// you should run it whenever RealFaviconGenerator updates its
+// package (see the check-for-favicon-update task below).
+gulp.task('generate-favicon', function (done) {
+  realFavicon.generateFavicon({
+    masterPicture: 'app/images/icons/favicon.png',
+    dest: 'docs/images/icons',
+    iconsPath: '/',
+    design: {
+      ios: {
+        pictureAspect: 'backgroundAndMargin',
+        backgroundColor: '#ffffff',
+        margin: '42%',
+        assets: {
+          ios6AndPriorIcons: false,
+          ios7AndLaterIcons: false,
+          precomposedIcons: false,
+          declareOnlyDefaultIcon: true
+        }
+      },
+      desktopBrowser: {},
+      windows: {
+        pictureAspect: 'whiteSilhouette',
+        backgroundColor: '#603cba',
+        onConflict: 'override',
+        assets: {
+          windows80Ie10Tile: false,
+          windows10Ie11EdgeTiles: {
+            small: false,
+            medium: true,
+            big: false,
+            rectangle: false
+          }
+        }
+      },
+      androidChrome: {
+        pictureAspect: 'shadow',
+        themeColor: '#0d426c',
+        manifest: {
+          name: 'asd-kamieniarstwo',
+          startUrl: 'asd-kamieniarstwo.pl',
+          display: 'standalone',
+          orientation: 'notSet',
+          onConflict: 'override',
+          declared: true
+        },
+        assets: {
+          legacyIcon: false,
+          lowResolutionIcons: false
+        }
+      },
+      safariPinnedTab: {
+        pictureAspect: 'silhouette',
+        themeColor: '#0d426c'
+      }
+    },
+    settings: {
+      compression: 5,
+      scalingAlgorithm: 'Mitchell',
+      errorOnImageTooSmall: false,
+      readmeFile: false,
+      htmlCodeFile: true,
+      usePathAsIs: false
+    },
+    markupFile: FAVICON_DATA_FILE
+  }, function () {
+    done();
+  });
+});
+
+// Inject the favicon markups in your HTML pages. You should run
+// this task whenever you modify a page. You can keep this task
+// as is or refactor your existing HTML pipeline.
+gulp.task('inject-favicon-markups', function () {
+  return gulp.src(['app/*.html'])
+    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+    .pipe(gulp.dest('app/'));
+});
+
+// Check for updates on RealFaviconGenerator (think: Apple has just
+// released a new Touch icon along with the latest version of iOS).
+// Run this task from time to time. Ideally, make it part of your
+// continuous integration system.
+gulp.task('check-for-favicon-update', function (done) {
+  var currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
+  realFavicon.checkForUpdates(currentVersion, function (err) {
+    if (err) {
+      throw err;
+    }
+  });
+});
+
 
 gulp.task('browserSync', () => {
   browserSync.init({
@@ -73,11 +173,9 @@ gulp.task("uncss", function () {
 gulp.task('useref', () => {
   return gulp.src(['app/*.html'], )
     .pipe(useref())
-    .pipe(gulpIf('*.js',
-      babel({
-        presets: ['@babel/env']
-      })
-    ))
+    .pipe(gulpIf('*.js', babel({
+      presets: ['@babel/env']
+    })))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulpIf("app/*.html", htmlmin({
       collapseWhitespace: true,
@@ -86,24 +184,30 @@ gulp.task('useref', () => {
     .pipe(gulp.dest('docs'))
 });
 
+// gulp.task('compressjs', function () {
+//   gulp.src('docs/js/script.min.js')
+//     .pipe(minify())
+//     .pipe(gulp.dest('docs/js'))
+// });
+
 gulp.task('scripts', () => {
-  return gulp.src(['app/js/*.js'])
+  return gulp.src(['docs/js/script.min.js'])
     .pipe(babel({
       presets: ['@babel/env']
     }))
     .on('error', function (err) {
       gutil.log(gutil.colors.red('[Error]'), err.toString());
     })
-    .pipe(gulp.dest('docs/js'));
+    .pipe(gulp.dest('docs/js/script.min.js'));
 })
 
 gulp.task('minifyhtml', () => {
-  return gulp.src('app/**/*.html')
+  return gulp.src('docs/**/*.html')
     .pipe(htmlmin({
       collapseWhitespace: true,
       conservativeCollapse: true
     }))
-    .pipe(gulp.dest('app/'));
+    .pipe(gulp.dest('docs/'));
 });
 
 gulp.task('prefixer', () =>
@@ -126,6 +230,10 @@ gulp.task('default', function (callback) {
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:docs', ['sass', 'images'], 'prefixer', 'uncss', 'useref','dataJSON',
+  runSequence('clean:docs', "generate-favicon", ['sass', 'images'], 'prefixer', 'uncss', 'useref', 'minifyhtml', 'dataJSON',
     callback)
+})
+
+gulp.task('minbuild', function (callback) {
+  runSequence('clean:docs', ['sass', 'images'], "useref", "dataJSON", callback)
 })
