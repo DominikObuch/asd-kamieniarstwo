@@ -1,11 +1,12 @@
 let prom = new Promise(function (resolve, reject) {
-    
+
     let xhr = new XMLHttpRequest();
     var url = window.location.pathname;
     var filename = url.substring(url.lastIndexOf('/') + 1);
     filename = filename.substr(0, filename.length - 5) //remove ".html" from it 
-    xhr.open("GET", `${window.origin}/js/dataJSON/${filename}.json`, true);
-    
+    debugger
+    xhr.open("GET", `${window.location.href.substring(0,window.location.href.lastIndexOf("/"))}/js/dataJSON/${filename}.json`, true);
+
     xhr.addEventListener('load', function () {
         resolve(this.response)
     })
@@ -41,7 +42,7 @@ let pages = {
 
 
     overwriteCurrent() {
-        
+
         let i = 0;
         for (this.currentShown = this.lastShown; this.currentShown < this.containersEl.length + this.lastShown; this.currentShown++) { //this one for current article 
 
@@ -73,7 +74,7 @@ function animSwitchSite(i) {
         document.getElementsByClassName("products__card")[i].classList.add("reload-page");
     }
     pages.scrollTop();
-    
+
 
     for (let i = 0; i < document.getElementsByClassName("products__card").length; i++) {
         document.getElementsByClassName("products__card")[i].addEventListener("animationend", function () {
@@ -83,42 +84,41 @@ function animSwitchSite(i) {
 }
 
 
-$(function() {
-  (function(name) {
-    var container = $('#pagination-' + name);
-    var sources = function () {
+$(function () {
+    (function (name) {
+        var container = $('#pagination-' + name);
+        var sources = function () {
 
-	var result = [];
-        for(let i =1; i <= Math.ceil(pages.data.length/9); i++ ){
-            result.push(i)
-        }
-      
-      return result;
-    }();
-
-    var options = {
-      dataSource: sources,
-      ulClassName: "products__list-point",
-	  pageSize: 1,
-	  autoHidePrevious: true,
-    autoHideNext: true,
-      callback: function (response, pagination) {
-        amount = pagination.pageNumber - pages.currentPage;
-        animSwitchSite();
-        if (pages.lastShown + pages.containersEl.length <= pages.data.length) { //checks if there are still some articles
-            pages.lastShown += pages.containersEl.length * amount; // adds pages 
-            for (let i = 0; i < pages.containersEl.length; i++) { // shows the unseen articles 
-                pages.containersEl[i].classList.remove("d-none");
+            var result = [];
+            for (let i = 1; i <= Math.ceil(pages.data.length / 9); i++) {
+                result.push(i)
             }
-            pages.currentPage += amount;
-            pages.overwriteCurrent();
-        }
-      }
-    };
-    container.pagination(options);
 
-  })('cont');
+            return result;
+        }();
 
- 
+        var options = {
+            dataSource: sources,
+            ulClassName: "products__list-point",
+            pageSize: 1,
+            autoHidePrevious: true,
+            autoHideNext: true,
+            callback: function (response, pagination) {
+                amount = pagination.pageNumber - pages.currentPage;
+                animSwitchSite();
+                if (pages.lastShown + pages.containersEl.length <= pages.data.length) { //checks if there are still some articles
+                    pages.lastShown += pages.containersEl.length * amount; // adds pages 
+                    for (let i = 0; i < pages.containersEl.length; i++) { // shows the unseen articles 
+                        pages.containersEl[i].classList.remove("d-none");
+                    }
+                    pages.currentPage += amount;
+                    pages.overwriteCurrent();
+                }
+            }
+        };
+        container.pagination(options);
+
+    })('cont');
+
+
 })
-
