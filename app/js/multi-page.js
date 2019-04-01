@@ -84,7 +84,7 @@ function animSwitchSite(i) {
 }
 
 
-$(function () {
+(function () {
     (function (name) {
         var container = $('#pagination-' + name);
         var sources = function () {
