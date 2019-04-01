@@ -2,7 +2,6 @@ let zoomed = {
     images: document.getElementsByClassName("products__image"),
 
     appearZoom(el){
-        console.log(this)
         
         this.currentImgSrc = el.target.src;
         this.zoomEl.childNodes[1].childNodes[1].src = this.currentImgSrc;

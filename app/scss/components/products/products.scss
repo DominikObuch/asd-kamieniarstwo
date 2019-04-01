@@ -12,7 +12,7 @@
         height: 10rem;
         padding: 0;
         object-fit: cover;
-        cursor: pointer;
+        cursor: zoom-in;
 
         @include media-breakpoint-up(md) {
             height: 21rem;
@@ -22,7 +22,10 @@
     }
 
     &__heading {
-        font-weight: 900;
+        font-weight: 500;
+        @include media-breakpoint-up(md) {
+            font-weight: 600;
+        }
     }
 
     &__body {
@@ -47,6 +50,7 @@
         text-decoration: underline;
         line-height: 25px;
         justify-content: center;
+        list-style: none;
         cursor: pointer;
         @include media-breakpoint-up(md) {
             justify-content: end;
