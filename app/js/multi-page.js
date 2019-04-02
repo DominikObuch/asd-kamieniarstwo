@@ -4,7 +4,7 @@ let prom = new Promise(function (resolve, reject) {
     var url = window.location.pathname;
     var filename = url.substring(url.lastIndexOf('/') + 1);
     filename = filename.substr(0, filename.length - 5) //remove ".html" from it 
-    
+
     xhr.open("GET", `${window.location.href.substring(0,window.location.href.lastIndexOf("/"))}/js/dataJSON/${filename}.json`, true);
 
     xhr.addEventListener('load', function () {
@@ -16,6 +16,38 @@ prom.then(function (value) {
     let response = JSON.parse(value);
     pages.data = response.data;
     pages.overwriteCurrent();
+    let name = 'cont'
+    var container = $('#pagination-' + name);
+    var sources = function () {
+
+        var result = [];
+        for (let i = 1; i <= Math.ceil(pages.data.length / pages.articleEl[0].length); i++) {
+            result.push(i)
+        }
+        return result;
+    }();
+    var options = {
+        dataSource: sources,
+        ulClassName: "products__list-point",
+        pageSize: 1,
+        autoHidePrevious: true,
+        autoHideNext: true,
+        callback: function (response, pagination) {
+            amount = pagination.pageNumber - pages.currentPage;
+            animSwitchSite();
+            if (pages.lastShown + pages.containersEl.length <= pages.data.length) { //checks if there are still some articles
+                pages.lastShown += pages.containersEl.length * amount; // adds pages 
+                for (let i = 0; i < pages.containersEl.length; i++) { // shows the unseen articles 
+                    pages.containersEl[i].classList.remove("d-none");
+                }
+                pages.currentPage += amount;
+                pages.overwriteCurrent();
+            }
+        }
+    };
+    container.pagination(options);
+
+
 })
 //if in the future u will read it, just know I didn't know how the sql and any back-end language works and the customer didn't like cms so i had to do it like that :/ 
 let pages = {
@@ -82,41 +114,3 @@ function animSwitchSite(i) {
         })
     }
 }
-
-
-$(function () {
-    (function (name) {
-        var container = $('#pagination-' + name);
-        var sources = function () {
-
-            var result = [];
-            for (let i = 1; i <= Math.ceil(pages.data.length / pages.articleEl[0].length); i++) {
-                result.push(i)
-            }
-            return result;
-        }();
-        var options = {
-            dataSource: sources,
-            ulClassName: "products__list-point",
-            pageSize: 1,
-            autoHidePrevious: true,
-            autoHideNext: true,
-            callback: function (response, pagination) {
-                amount = pagination.pageNumber - pages.currentPage;
-                animSwitchSite();
-                if (pages.lastShown + pages.containersEl.length <= pages.data.length) { //checks if there are still some articles
-                    pages.lastShown += pages.containersEl.length * amount; // adds pages 
-                    for (let i = 0; i < pages.containersEl.length; i++) { // shows the unseen articles 
-                        pages.containersEl[i].classList.remove("d-none");
-                    }
-                    pages.currentPage += amount;
-                    pages.overwriteCurrent();
-                }
-            }
-        };
-        container.pagination(options);
-
-    })('cont');
-
-
-})
