@@ -161,6 +161,7 @@ gulp.task("uncss", function () {
       ],
       ignore: [
         /\.lazy-loaded/,
+        /\.products__list-point/,
         /\.show/,
         /\.hamburger__expanded/,
         /\.collapsed/,
