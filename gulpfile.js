@@ -17,7 +17,7 @@ var fs = require('fs');
 var uglify = require('gulp-uglify');
 var pipeline = require('readable-stream').pipeline;
 // File where the favicon markups are stored
-var FAVICON_DATA_FILE = 'faviconData.json';
+var FAVICON_DATA_FILE = 'docs/images/icons/faviconData.json';
 
 // Generate the icons. This task takes a few seconds to complete.
 // You should run it at least once to create the icons. Then,
