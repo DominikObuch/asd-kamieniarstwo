@@ -7167,7 +7167,7 @@ ul {
   height: 10rem;
   padding: 0;
   object-fit: cover;
-  cursor: pointer; }
+  cursor: zoom-in; }
   @media (min-width: 768px) {
     .products__image {
       height: 21rem;
@@ -7175,7 +7175,10 @@ ul {
       border-radius: 5px 0 0 5px; } }
 
 .products__heading {
-  font-weight: 900; }
+  font-weight: 500; }
+  @media (min-width: 768px) {
+    .products__heading {
+      font-weight: 600; } }
 
 .products__body {
   border-radius: 0 0 4px 4px;
@@ -7195,6 +7198,7 @@ ul {
   text-decoration: underline;
   line-height: 25px;
   justify-content: center;
+  list-style: none;
   cursor: pointer; }
   @media (min-width: 768px) {
     .products__list-point {

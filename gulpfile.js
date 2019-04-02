@@ -27,7 +27,7 @@ gulp.task('generate-favicon', function (done) {
   realFavicon.generateFavicon({
     masterPicture: 'app/images/icons/favicon.png',
     dest: 'docs/images/icons',
-    iconsPath: '/',
+    iconsPath: './images/icons/',
     design: {
       ios: {
         pictureAspect: 'backgroundAndMargin',
@@ -137,11 +137,12 @@ gulp.task('images', () => {
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg|mp4|webm)')
     .pipe(gulp.dest('docs/images'))
 });
-gulp.task('dataJSON', () => {
-  return gulp.src('app/js/**/*.json)')
-    .pipe(gulp.dest('docs'))
-});
 
+gulp.task('dataJSON', [], function() {
+  
+  gulp.src("app/js/dataJSON/*.json")
+      .pipe(gulp.dest('docs/js/dataJSON/'));
+});
 gulp.task('watch', ['browserSync', 'sass'], () => {
   gulp.watch('app/scss/**/*.scss', ['sass']);
   gulp.watch('app/*.html', browserSync.reload);

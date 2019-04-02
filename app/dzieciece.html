@@ -10,15 +10,24 @@
     <link href="/css/main.css" rel="stylesheet">
     <!-- endbuild-->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,900|Roboto|Ubuntu" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
+    <link rel="manifest" href="./images/icons/site.webmanifest">
+    <link rel="mask-icon" href="./images/icons/safari-pinned-tab.svg" color="#0d426c">
+    <link rel="shortcut icon" href="./images/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="msapplication-TileImage" content="./images/icons/mstile-144x144.png">
+    <meta name="msapplication-config" content="./images/icons/browserconfig.xml">
+    <meta name="theme-color" content="#0d426c">
+
 </head>
 
 <body>
     <div class="container-fluid">
         <!-- HEADER START -->
         <header class="header row " id="strona-glowna">
-
             <nav class="header__nav col-12 position-fixed w-100 navbar navbar-expand-lg navbar-light ">
-
                 <a class="navbar-brand" href="index.html"> <img src="images/header/logo.svg" class="header__logo"
                         alt="">
                 </a>
@@ -31,24 +40,21 @@
                         <span class="hamburger__bar hamburger__bar--third"></span>
                     </span>
                 </button>
-
                 <div class="collapse justify-content-end  navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav  mr-0 text-center  ">
                         <li class="nav-item active mr-lg-4">
-                            <a class="nav-link link-smooth" href="#strona-glowna">Strona główna </a>
+                            <a class="nav-link " href="./index.html">Strona główna </a>
                         </li>
                         <div class="dropdown-divider"></div>
                         <li class="nav-item mr-lg-4 active  ">
                             <a class="nav-link" href="./oferta.html">Oferta </a>
                         </li>
-
                         <div class="dropdown-divider"></div>
                         <li class="nav-item active">
                             <a class="nav-link link-smooth" href="#kontakt">Kontakt</a>
                         </li>
                     </ul>
                 </div>
-
             </nav>
             <div class="header__video-cont ">
                 <h2 class="header__heading position-absolute text-center"> Wieloletnie doświadczenie oraz zadowoleni
@@ -56,218 +62,181 @@
                 <video class="header__video" id="vid" muted loop autoplay preload="auto">
                     <source src="images/header/FallCemetary_1.mp4"></video>
             </div>
-
         </header>
         <!-- HEADER END -->
-
         <!-- PRODUCTS START -->
         <section>
             <div id="scroll-top" class="row zindex  bg-light justify-content-between">
                 <div class="menu  py-4 position-relative  col-5 " id="menu-headstones">Nagrobki
-                    <img class="menu__arrow" src="images/products/_ionicons_svg_md-arrow-dropdown (1).svg">
+                    <img class="menu__arrow" src="images/products/arrow-dropdown.svg">
                 </div>
                 <div class="menu  py-4 position-relative text-right col-5 " id="menu-sort">Sortuj
-                    <img class="menu__arrow" src="images/products/_ionicons_svg_md-arrow-dropdown (1).svg">
+                    <img class="menu__arrow" src="images/products/arrow-dropdown.svg">
                 </div>
             </div>
             <div class="menu__list-cont zero-opacity position-absolute ">
                 <ul class="menu__list ">
-                    <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href=""> <img class="menu__arrow--right"
-                                src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt=""> Nagrobki
+                    <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href="./pojedyncze.html"> <img
+                                class="menu__arrow--right" src="images/products/arrow-forward.svg"
+                                alt=" "> Nagrobki
                             pojedyńcze</a></li>
-                    <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href=""> <img class="menu__arrow--right"
-                                src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt=""> Nagrobki podwójne</a>
+                    <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href="./podwojne.html"> <img
+                                class="menu__arrow--right" src="images/products/arrow-forward.svg"
+                                alt=" "> Nagrobki podwójne</a>
                     </li>
-                    <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href=""> <img class="menu__arrow--right"
-                                src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt=""> Nagrobki urnowe</a>
+                    <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href="./urnowe.html"> <img
+                                class="menu__arrow--right" src="images/products/arrow-forward.svg"
+                                alt=" "> Nagrobki urnowe</a>
                     </li>
-                    <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href=""> <img class="menu__arrow--right"
-                                src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt=""> Nagrobki dziecięce</a>
+                    <li class="menu__list-point text-md-center p-2 p-md-3 "> <a href="./dzieciece.html"> <img
+                                class="menu__arrow--right" src="images/products/arrow-forward.svg"
+                                alt=" "> Nagrobki dziecięce</a>
                     </li>
                 </ul>
             </div>
             <div class="menu__list-cont zero-opacity position-absolute ">
                 <ul class="menu__list " id="menu-">
                     <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="priceIncreasing">
-                        <img class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg"
-                            alt="">
+                        <img class="menu__arrow--right" src="images/products/arrow-forward.svg" alt>
                         cena: od najniższej</li>
                     <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="priceDecreasing">
-                        <img class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg"
-                            alt="">
+                        <img class="menu__arrow--right" src="images/products/arrow-forward.svg" alt>
                         cena: od najwyższej</li>
                     <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 "
                         id="alphabeticallyCategories">
-                        <img class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg"
-                            alt="">
+                        <img class="menu__arrow--right" src="images/products/arrow-forward.svg" alt>
                         rodzaj granitu: alfabetycznie</li>
                     <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="widthest"> <img
-                            class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt="">
+                            class="menu__arrow--right" src="images/products/arrow-forward.svg" alt>
                         szerokość: najszersze</li>
                     <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="narrowest"> <img
-                            class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt="">
+                            class="menu__arrow--right" src="images/products/arrow-forward.svg" alt>
                         szerokość: najwęższe</li>
                     <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="heighest"> <img
-                            class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt="">
+                            class="menu__arrow--right" src="images/products/arrow-forward.svg" alt>
                         długość: najdłuższe</li>
                     <li class="menu__list-point menu__list-point--sort text-md-center p-2 p-md-3 " id="shortest"> <img
-                            class="menu__arrow--right" src="images/products/_ionicons_svg_ios-arrow-forward.svg" alt="">
+                            class="menu__arrow--right" src="images/products/arrow-forward.svg" alt>
                         długość: najkrótsze</li>
                 </ul>
             </div>
         </section>
         <section>
             <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
-
-                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <img class="products__image col-md-7 col-12 " src alt>
                 <div
                     class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
                     <h3 class="products__heading py-2 text-center">
                         <!-- name-->
                     </h3>
-
                     <div class="font-weight-bold">Kategoria:</div>
                     <div class="d-category">
                         <!-- category -->
                     </div>
-
-
                 </div>
             </article>
             <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
-
-                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <img class="products__image col-md-7 col-12 " src alt>
                 <div
                     class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
                     <h3 class="products__heading py-2 text-center">
                         <!-- name-->
                     </h3>
-
                     <div class="font-weight-bold">Kategoria:</div>
                     <div class="d-category">
                         <!-- category -->
                     </div>
-
-
                 </div>
             </article>
             <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
-
-                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <img class="products__image col-md-7 col-12 " src alt>
                 <div
                     class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
                     <h3 class="products__heading py-2 text-center">
                         <!-- name-->
                     </h3>
-
                     <div class="font-weight-bold">Kategoria:</div>
                     <div class="d-category">
                         <!-- category -->
                     </div>
-
-
                 </div>
             </article>
             <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
-
-                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <img class="products__image col-md-7 col-12 " src alt>
                 <div
                     class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
                     <h3 class="products__heading py-2 text-center">
                         <!-- name-->
                     </h3>
-
                     <div class="font-weight-bold">Kategoria:</div>
                     <div class="d-category">
                         <!-- category -->
                     </div>
-
-
                 </div>
             </article>
             <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
-
-                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <img class="products__image col-md-7 col-12 " src alt>
                 <div
                     class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
                     <h3 class="products__heading py-2 text-center">
                         <!-- name-->
                     </h3>
-
                     <div class="font-weight-bold">Kategoria:</div>
                     <div class="d-category">
                         <!-- category -->
                     </div>
-
-
                 </div>
             </article>
             <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
-
-                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <img class="products__image col-md-7 col-12 " src alt>
                 <div
                     class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
                     <h3 class="products__heading py-2 text-center">
                         <!-- name-->
                     </h3>
-
                     <div class="font-weight-bold">Kategoria:</div>
                     <div class="d-category">
                         <!-- category -->
                     </div>
-
-
                 </div>
             </article>
             <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
-
-                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <img class="products__image col-md-7 col-12 " src alt>
                 <div
                     class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
                     <h3 class="products__heading py-2 text-center">
                         <!-- name-->
                     </h3>
-
                     <div class="font-weight-bold">Kategoria:</div>
                     <div class="d-category">
                         <!-- category -->
                     </div>
-
-
                 </div>
             </article>
             <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
-
-                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <img class="products__image col-md-7 col-12 " src alt>
                 <div
                     class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
                     <h3 class="products__heading py-2 text-center">
                         <!-- name-->
                     </h3>
-
                     <div class="font-weight-bold">Kategoria:</div>
                     <div class="d-category">
                         <!-- category -->
                     </div>
-
-
                 </div>
             </article>
             <article class="products__card  align-items-center row my-4 mx-2 justify-content-between  lazy-loading">
-
-                <img class="products__image col-md-7 col-12 " src="" alt="">
+                <img class="products__image col-md-7 col-12 " src alt>
                 <div
                     class="products__body pb-2 align-content-center col-12 justify-content-center col-md-5 text-center">
                     <h3 class="products__heading py-2 text-center">
                         <!-- name-->
                     </h3>
-
                     <div class="font-weight-bold">Kategoria:</div>
                     <div class="d-category">
                         <!-- category -->
                     </div>
-
-
                 </div>
             </article>
             <div id="wrapper" class="col-12 mb-3 mt-3">
@@ -276,15 +245,13 @@
                 </div>
             </div>
         </section>
-
         <!-- PRODUCTS END -->
         <div id="zoomEl" class="position-fixed no-zoom zoomed justify-content-center">
             <div class="zoomed__cont row justify-content-center">
-                <img class="zoomed__image" src="images/ofert/single.jpg" alt="">
+                <img class="zoomed__image" src="images/ofert/single.jpg" alt>
                 <div class="zoomed__exit ">
                     <span class="zoomed__bar zoomed__bar--first"></span>
                     <span class="zoomed__bar zoomed__bar--second"></span>
-
                 </div>
             </div>
         </div>
@@ -302,15 +269,15 @@
                     kontakt
                 </header>
                 <div class="footer__body ">
-                    <p> ul.Osobowicka 61 <br /> 51-110 Wrocław <br /> Email: biuro@asd-kamieniarstwo.pl</p>
+                    <p> ul.Osobowicka 61 <br> 51-110 Wrocław <br> Email: biuro@asd-kamieniarstwo.pl</p>
                     <p>Telefon: +48
                         667 522 776</p> Godziny
-                    otwarcia:<br />
+                    otwarcia:<br>
                     <ul>
                         <li>pn-pt 8-16 </li>
                         <li> sob 8-14 </li>
                     </ul>
-                    W sezonie zimowym: <br />
+                    W sezonie zimowym: <br>
                     <ul>
                         <li> pn-pt 9-15</li>
                         <li>sob 9-13</li>
@@ -320,52 +287,53 @@
             <div class="footer__section col-11 col-md-2 col-lg-2 " id="kontakt">
                 <header class="footer__heading  mb-2 mt-3 text-uppercase"> strony</header>
                 <div class="footer__body  ">
-                    <a class="footer__link " rel=”noopener noreferrer” href="./index.html">Strona główna</a><br />
-                    <a class="footer__link " rel=”noopener noreferrer” href="./oferta.html">Oferta</a><br />
-                    <a class="footer__link mb-5 " rel=”noopener noreferrer” href="nagrobki.html">Nagrobki</a>
+                    <a class="footer__link " rel="”noopener" noreferrer” href="./index.html">Strona główna</a><br>
+                    <a class="footer__link " rel="”noopener" noreferrer” href="./oferta.html">Oferta</a><br>
+                    <a class="footer__link mb-5 " rel="”noopener" noreferrer” href="nagrobki.html">Nagrobki</a>
                     <div>
-                        <a rel=”noopener noreferrer” target="_blank"
-                            href="https://www.facebook.com/ASD-Kamieniarstwo-795802100586510/" rel="no">
+                        <a rel="”noopener" noreferrer” target="_blank"
+                            href="https://www.facebook.com/ASD-Kamieniarstwo-795802100586510/">
                             <img class="footer__logo mt-2" src="images/footer/facebook.svg" alt="facebook logo">
                         </a>
-                        <a rel=”noopener noreferrer” target="_blank">
-                            <img class=" mt-2" src="images/footer/googleplus.svg" alt=" googleplus logo"></div>
-                    </a>
+                        <a rel="”noopener" noreferrer” target="_blank">
+                            <img class=" mt-2" src="images/footer/googleplus.svg" alt=" googleplus logo"></a></div>
                 </div>
                 <img>
-
             </div>
             <div class="footer__section footer__section--map col-11 col-md-3 col-lg-5"><iframe class="footer__map  "
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.531084060961!2d17.002630215756277!3d51.135556879575674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fea1f3ad1055b%3A0xa89e70c6e7ec9216!2sASD+Kamieniarstwo!5e0!3m2!1spl!2spl!4v1549562378982"
                     frameborder="0" style="border:0" allowfullscreen></iframe></div>
         </footer>
         <!-- FOOTER END -->
-
-
     </div>
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
+        >
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" >
+    </script>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"
         integrity="sha256-E+fw0vUbuPq4p3FWWtX7FzzlcMTe7hvrgZxOk8LPAh4=" crossorigin="anonymous"></script>
     <!-- build:js js/script.min.js -->
     <script type="text/javascript" src="js/index.js"></script>
-   
     <script type="text/javascript" src="js/hamburger.js"></script>
     <script type="text/javascript" src="js/lazy-loading.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/products.min.js -->
     <script type="text/javascript" src="js/multi-page.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
-    <script type="text/javascript" src="js/sort.js"></script>
-    <script type="text/javascript" src="js/image-zoom.js" defer></script>
+
+    <script type="text/javascript" src="js/image-zoom.js" ></script>
     <!-- endbuild -->
 </body>
 
 </html>
+
+
+<!-- endbuild -->

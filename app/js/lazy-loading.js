@@ -34,15 +34,15 @@ var raf = window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
     window.msRequestAnimationFrame ||
     window.oRequestAnimationFrame;
-var $window = $(window);
-var lastScrollTop = $window.scrollTop();
+var $window = window;
+var lastScrollTop = $window.pageYOffset;
 
 if (raf) {
     loop();
 }
 
 function loop() {
-    var scrollTop = $window.scrollTop();
+    var scrollTop = $window.pageYOffset;
     if (lastScrollTop === scrollTop) {
         raf(loop);
         return;
