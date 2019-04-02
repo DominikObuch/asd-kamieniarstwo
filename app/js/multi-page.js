@@ -84,19 +84,17 @@ function animSwitchSite(i) {
 }
 
 
-(function () {
+$(function () {
     (function (name) {
         var container = $('#pagination-' + name);
         var sources = function () {
 
             var result = [];
-            for (let i = 1; i <= Math.ceil(pages.data.length / 9); i++) {
+            for (let i = 1; i <= Math.ceil(pages.data.length / pages.articleEl[0].length); i++) {
                 result.push(i)
             }
-
             return result;
         }();
-
         var options = {
             dataSource: sources,
             ulClassName: "products__list-point",
