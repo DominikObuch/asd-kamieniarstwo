@@ -33,7 +33,7 @@ prom.then(function (value) {
         autoHidePrevious: true,
         autoHideNext: true,
         callback: function (response, pagination) {
-            amount = pagination.pageNumber - pages.currentPage;
+            let amount = pagination.pageNumber - pages.currentPage;
             animSwitchSite();
             if (pages.lastShown + pages.containersEl.length <= pages.data.length) { //checks if there are still some articles
                 pages.lastShown += pages.containersEl.length * amount; // adds pages 
