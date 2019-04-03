@@ -4,8 +4,10 @@ let prom = new Promise(function (resolve, reject) {
     var url = window.location.pathname;
     var filename = url.substring(url.lastIndexOf('/') + 1);
     filename = filename.substr(0, filename.length - 5) //remove ".html" from it 
-
-    xhr.open("GET", `${window.location.href.substring(0,window.location.href.lastIndexOf("/"))}/js/dataJSON/${filename}.json`, true);
+    let fullurl = window.location.href.substring(0,window.location.href.lastIndexOf("/"))
+    fullurl = fullurl.substring(0,fullurl.lastIndexOf("/"))
+    fullurl = `${fullurl}/js/dataJSON/${filename}.json`
+    xhr.open("GET", fullurl, true);
 
     xhr.addEventListener('load', function () {
         resolve(this.response)

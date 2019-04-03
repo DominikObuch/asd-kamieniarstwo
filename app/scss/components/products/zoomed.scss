@@ -35,16 +35,19 @@
     }
 
     &__exit {
+       
         position: absolute;
-        right: 1rem;
+        right: 2rem;
         top: 0rem;
         width: 1.9rem;
         height: 1.9rem;
         background: white;
         border-radius: 9999px;
+        @include media-breakpoint-up(sm){
+            position: relative;
+        }
         @include media-breakpoint-up(md) { 
             width: 0;
-            position: relative;
             right: 0;
         }
 
