@@ -30,3 +30,34 @@ document.onkeydown = function(evt) {
        zoomed.disappearZoom(zoomed.zoomEl)
     }
 };
+document.getElementsByClassName("zoomed__image")[0].addEventListener("touchstart", e=>{
+
+})
+
+
+let startX;
+let startY;
+let endX;
+let endY;
+
+//Function to handle swipes
+function handleTouch(start,end){
+  //calculate the distance on x-axis and o y-axis. Check wheter had the great moving ratio.
+  var xDist = endX - startX;
+  var yDist = endY - startY;
+  let maxDyst = 100;
+  
+  if(xDist >= maxDyst || yDist >= maxDyst || xDist <= -maxDyst || yDist <= -maxDyst ){
+      zoomed.disappearZoom(zoomed.zoomEl)
+  }  
+}
+ document.getElementsByClassName("zoomed__image")[0].addEventListener('touchstart', function(event){
+   startX = event.touches[0].clientX;
+   startY = event.touches[0].clientY;
+ })
+  document.getElementsByClassName("zoomed__image")[0].addEventListener('touchend', function(event){
+   endX = event.changedTouches[0].clientX;
+   endY = event.changedTouches[0].clientY;
+   handleTouch(startX, endX)
+ })
+

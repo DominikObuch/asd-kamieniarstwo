@@ -6936,7 +6936,7 @@ a.text-dark:hover, a.text-dark:focus {
   .hamburger__expanded .hamburger__bar--third {
     transform: rotate(-45deg) translate(6px, -6.5px); }
   .hamburger__bar {
-    transition: .7s transform, .5s opacity;
+    transition: .4s transform, .4s opacity;
     transition-timing-function: cubic-bezier(0.31, -0.63, 0.63, 1.41);
     cursor: pointer;
     right: 2rem;
@@ -7119,11 +7119,14 @@ ul {
     .ofert-section {
       background-size: cover; }
       .ofert-section--first {
-        background: url(../images/ofert/background1.jpg) no-repeat fixed center; }
+        background: url(../images/ofert/background1.jpg) no-repeat fixed center;
+        background-size: cover; }
       .ofert-section--second {
-        background: url(../images/ofert/background2.jpg) no-repeat fixed center; }
+        background: url(../images/ofert/background2.jpg) no-repeat fixed center;
+        background-size: cover; }
       .ofert-section--third {
-        background: url(../images/ofert/background3.jpg) no-repeat fixed center; } }
+        background: url(../images/ofert/background3.jpg) no-repeat fixed center;
+        background-size: cover; } }
   .ofert-section__heading {
     font-size: 2rem;
     font-family: "Roboto", sans-serif;
@@ -7316,13 +7319,13 @@ ul {
 
 .reload-page {
   animation-name: reload-page;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-in; }
 
 @keyframes reload-page {
   0% {
     opacity: 1; }
-  50% {
+  1% {
     opacity: 0; }
   100% {
     opacity: 1; } }

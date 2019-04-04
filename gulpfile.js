@@ -138,14 +138,14 @@ gulp.task('images', () => {
     .pipe(gulp.dest('docs/images'))
 });
 
-gulp.task('dataJSON', [], function() {
-  
+gulp.task('dataJSON', [], function () {
+
   gulp.src("app/js/dataJSON/*.json")
-      .pipe(gulp.dest('docs/js/dataJSON/'));
+    .pipe(gulp.dest('docs/js/dataJSON/'));
 });
 gulp.task('watch', ['browserSync', 'sass'], () => {
   gulp.watch('app/scss/**/*.scss', ['sass']);
-  gulp.watch('app/*.html', browserSync.reload);
+  gulp.watch('app/**/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
@@ -173,7 +173,7 @@ gulp.task("uncss", function () {
 })
 
 gulp.task('useref', () => {
-  return gulp.src(['app/*.html'], )
+  return gulp.src(['app/**/*.html'])
     .pipe(useref())
     .pipe(gulpIf('*.js', babel({
       presets: ['@babel/env']

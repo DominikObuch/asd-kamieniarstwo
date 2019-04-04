@@ -4,8 +4,8 @@ let prom = new Promise(function (resolve, reject) {
     var url = window.location.pathname;
     var filename = url.substring(url.lastIndexOf('/') + 1);
     filename = filename.substr(0, filename.length - 5) //remove ".html" from it 
-    let fullurl = window.location.href.substring(0,window.location.href.lastIndexOf("/"))
-    fullurl = fullurl.substring(0,fullurl.lastIndexOf("/"))
+    let fullurl = window.location.href.substring(0, window.location.href.lastIndexOf("/"))
+    fullurl = fullurl.substring(0, fullurl.lastIndexOf("/"))
     fullurl = `${fullurl}/js/dataJSON/${filename}.json`
     xhr.open("GET", fullurl, true);
 
@@ -17,7 +17,6 @@ let prom = new Promise(function (resolve, reject) {
 prom.then(function (value) {
     let response = JSON.parse(value);
     pages.data = response.data;
-    pages.overwriteCurrent();
     let name = 'cont'
     var container = $('#pagination-' + name);
     var sources = function () {
@@ -37,13 +36,14 @@ prom.then(function (value) {
         callback: function (response, pagination) {
             let amount = pagination.pageNumber - pages.currentPage;
             animSwitchSite();
-            if (pages.lastShown + pages.containersEl.length <= pages.data.length) { //checks if there are still some articles
+
+            if (pages.lastShown + pages.containersEl.length - pages.articleEl[0].length <= pages.data.length) { //checks if there are still some articles
                 pages.lastShown += pages.containersEl.length * amount; // adds pages 
-                for (let i = 0; i < pages.containersEl.length; i++) { // shows the unseen articles 
-                    pages.containersEl[i].classList.remove("d-none");
-                }
+
                 pages.currentPage += amount;
-                pages.overwriteCurrent();
+                setTimeout(() => {
+                    pages.overwriteCurrent();
+                }, 200);
             }
         }
     };
@@ -78,20 +78,25 @@ let pages = {
     overwriteCurrent() {
 
         let i = 0;
+        console.log(this.currentShown, this.lastShown, this.currentShown < this.containersEl.length + this.lastShown)
+
         for (this.currentShown = this.lastShown; this.currentShown < this.containersEl.length + this.lastShown; this.currentShown++) { //this one for current article 
 
             for (let x = 0; x < this.articleEl.length; x++) { //this one for specyfic property
-
-
+                console.log(this.currentShown, this.lastShown, this.currentShown < this.containersEl.length + this.lastShown)
                 if (this.data[this.currentShown] == undefined) {
                     this.containersEl[i].classList.add("d-none");
-                } else if (this.articleEl[x][i] != undefined) {
-                    this.articleEl[x][i].textContent = this.data[this.currentShown][x];
-                }
 
+                } else if (this.containersEl[i].classList.contains("d-none")) {
+                    this.containersEl[i].classList.remove("d-none");
+                    this.articleEl[x][i].textContent = this.data[this.currentShown][x];
+                } else if (this.articleEl[x][i] !== undefined) {
+                    this.articleEl[x][i].textContent = this.data[this.currentShown][x];
+
+                }
             }
 
-            // another one for image changing
+            //  image changing
             if (this.data[this.currentShown] !== undefined) {
 
                 this.articleEl[6][i].src = this.data[this.currentShown][6]
