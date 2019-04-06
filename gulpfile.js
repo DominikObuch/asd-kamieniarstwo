@@ -183,7 +183,7 @@ gulp.task('useref', () => {
       collapseWhitespace: true,
       conservativeCollapse: true
     })))
-    .pipe(gulp.dest('docs'))
+    .pipe(gulp.dest('docs/'))
 });
 
 // gulp.task('compressjs', function () {
