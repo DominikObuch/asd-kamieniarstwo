@@ -78,12 +78,10 @@ let pages = {
     overwriteCurrent() {
 
         let i = 0;
-        console.log(this.currentShown, this.lastShown, this.currentShown < this.containersEl.length + this.lastShown)
 
         for (this.currentShown = this.lastShown; this.currentShown < this.containersEl.length + this.lastShown; this.currentShown++) { //this one for current article 
 
             for (let x = 0; x < this.articleEl.length; x++) { //this one for specyfic property
-                console.log(this.currentShown, this.lastShown, this.currentShown < this.containersEl.length + this.lastShown)
                 if (this.data[this.currentShown] == undefined) {
                     this.containersEl[i].classList.add("d-none");
 

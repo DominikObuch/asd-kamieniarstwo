@@ -14,6 +14,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var babel = require('gulp-babel');
 var realFavicon = require('gulp-real-favicon');
 var fs = require('fs');
+var rimraf = require("rimraf");
 var uglify = require('gulp-uglify');
 var pipeline = require('readable-stream').pipeline;
 // File where the favicon markups are stored
@@ -139,7 +140,6 @@ gulp.task('images', () => {
 });
 
 gulp.task('dataJSON', [], function () {
-
   gulp.src("app/js/dataJSON/*.json")
     .pipe(gulp.dest('docs/js/dataJSON/'));
 });
@@ -192,6 +192,14 @@ gulp.task('useref', () => {
 //     .pipe(gulp.dest('docs/js'))
 // });
 
+gulp.task('movejs', function () {
+  gulp.src("js/*")
+    .pipe(gulp.dest("docs/js/"))
+  setTimeout(function () {
+      del.sync(["./js", "./css"])
+  }, 3000)
+})
+
 gulp.task('scripts', () => {
   return gulp.src(['docs/js/script.min.js'])
     .pipe(babel({
@@ -232,10 +240,10 @@ gulp.task('default', function (callback) {
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:docs', "generate-favicon", ['sass', 'images'], 'prefixer', 'uncss', 'useref', 'minifyhtml', 'dataJSON',
+  runSequence('clean:docs', "generate-favicon", ['sass', 'images'], 'prefixer', 'uncss', 'useref', 'minifyhtml', 'dataJSON', 'movejs',
     callback)
 })
 
 gulp.task('minbuild', function (callback) {
-  runSequence('clean:docs', ['sass', 'images'], "useref", "dataJSON", callback)
+  runSequence('clean:docs', ['sass', 'images'], "useref", "dataJSON", "movejs", callback)
 })
