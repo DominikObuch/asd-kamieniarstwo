@@ -17,6 +17,8 @@ let prom = new Promise(function (resolve, reject) {
 prom.then(function (value) {
     let response = JSON.parse(value);
     pages.data = response.data;
+    pages.imageSrc = response.src;
+    pages.letterNumber = response.letterNumber;
     let name = 'cont'
     var container = $('#pagination-' + name);
     var sources = function () {
@@ -80,6 +82,9 @@ let pages = {
         let i = 0;
 
         for (this.currentShown = this.lastShown; this.currentShown < this.containersEl.length + this.lastShown; this.currentShown++) { //this one for current article 
+            if (this.data[this.currentShown] !== undefined) { //  image changing
+                this.articleEl[6][i].src = `${this.imageSrc}${i+1}.jpg`
+            }
 
             for (let x = 0; x < this.articleEl.length; x++) { //this one for specyfic property
                 if (this.data[this.currentShown] == undefined) {
@@ -93,12 +98,11 @@ let pages = {
 
                 }
             }
-
-            //  image changing
-            if (this.data[this.currentShown] !== undefined) {
-
-                this.articleEl[6][i].src = this.data[this.currentShown][6]
+            if (this.data[this.currentShown] !== undefined) { //  letterNumber changing 
+                this.articleEl[0][i].textContent += ` ${this.letterNumber+(i+1)}`
             }
+
+
             i++
         }
     }

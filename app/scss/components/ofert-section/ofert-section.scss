@@ -5,18 +5,18 @@
     @include media-breakpoint-up(md) {
         background-size: cover;
         &--first{
-            background: url(../images/ofert/background1.jpg) no-repeat fixed center;
+            background: url(../images/ofert/bg2.jpg) no-repeat fixed center;
             background-size: cover;
             
         }
         &--second{
-            background: url(../images/ofert/background2.jpg) no-repeat fixed center;
+            background: url(../images/ofert/bg3.jpg) no-repeat fixed center;
             background-size: cover;
             
         }
 
         &--third{
-            background: url(../images/ofert/background3.jpg) no-repeat fixed center;
+            background: url(../images/ofert/bg4.jpg) no-repeat fixed center;
             background-size: cover;
             
         }
