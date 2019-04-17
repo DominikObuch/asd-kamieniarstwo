@@ -175,7 +175,7 @@ gulp.task("uncss", function () {
 gulp.task('useref', () => {
   return gulp.src(['app/**/*.html'])
     .pipe(useref())
-    .pipe(gulpIf('*.js', babel({
+    .pipe(gulpIf('*.js && !== easyzoom.js', babel({
       presets: ['@babel/env']
     })))
     .pipe(gulpIf('*.css', cssnano()))
