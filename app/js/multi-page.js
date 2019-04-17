@@ -83,7 +83,8 @@ let pages = {
 
         for (this.currentShown = this.lastShown; this.currentShown < this.containersEl.length + this.lastShown; this.currentShown++) { //this one for current article 
             if (this.data[this.currentShown] !== undefined) { //  image changing
-                this.articleEl[6][i].src = `${this.imageSrc}${i+1}.jpg`
+                debugger
+                this.articleEl[6][i].src = `${this.imageSrc}${pages.lastShown+i+1}.jpg`   
             }
 
             for (let x = 0; x < this.articleEl.length; x++) { //this one for specyfic property
@@ -99,7 +100,8 @@ let pages = {
                 }
             }
             if (this.data[this.currentShown] !== undefined) { //  letterNumber changing 
-                this.articleEl[0][i].textContent += ` ${this.letterNumber+(i+1)}`
+                this.articleEl[0][i].textContent += ` ${this.letterNumber+(pages.lastShown+i+1)}`
+                
             }
 
 

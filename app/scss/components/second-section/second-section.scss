@@ -53,6 +53,7 @@
         border-radius: 13px 13px 0 0;
         height: 13rem;
         object-fit: cover;
+
         @include media-breakpoint-up(sm) {
             height:20rem;
         }
