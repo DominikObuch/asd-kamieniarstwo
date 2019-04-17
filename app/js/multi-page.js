@@ -83,7 +83,6 @@ let pages = {
 
         for (this.currentShown = this.lastShown; this.currentShown < this.containersEl.length + this.lastShown; this.currentShown++) { //this one for current article 
             if (this.data[this.currentShown] !== undefined) { //  image changing
-                debugger
                 this.articleEl[6][i].src = `${this.imageSrc}${pages.lastShown+i+1}.jpg`   
             }
 

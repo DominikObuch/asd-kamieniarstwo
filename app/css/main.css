@@ -1363,6 +1363,79 @@ ul {
   opacity: 0;
   z-index: -1; }
 
+.easyzoom-notice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 150;
+  width: 10em;
+  margin: -1em 0 0 -5em;
+  line-height: 2em;
+  text-align: center;
+  background: #FFF;
+  -webkit-box-shadow: 0 0 10px #888;
+  box-shadow: 0 0 10px #888; }
+
+.cont-move-forward {
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-name: contMoveForw;
+  animation-name: contMoveForw;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s; }
+
+.cont-move-back {
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-name: contMoveBack;
+  animation-name: contMoveBack;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes contMoveBack {
+  0%, 100% {
+    -webkit-transform: translate(0, 5%);
+    transform: translate(0, 5%); }
+  50% {
+    -webkit-transform: translate(100vw, 5%);
+    transform: translate(100vw, 5%); }
+  50.00000001% {
+    -webkit-transform: translate(-100vw, 5%);
+    transform: translate(-100vw, 5%); } }
+
+@keyframes contMoveBack {
+  0%, 100% {
+    -webkit-transform: translate(0, 5%);
+    transform: translate(0, 5%); }
+  50% {
+    -webkit-transform: translate(100vw, 5%);
+    transform: translate(100vw, 5%); }
+  50.00000001% {
+    -webkit-transform: translate(-100vw, 5%);
+    transform: translate(-100vw, 5%); } }
+
+@-webkit-keyframes contMoveForw {
+  0%, 100% {
+    -webkit-transform: translate(0, 5%);
+    transform: translate(0, 5%); }
+  50% {
+    -webkit-transform: translate(-100vw, 5%);
+    transform: translate(-100vw, 5%); }
+  50.00001% {
+    -webkit-transform: translate(100vw, 5%);
+    transform: translate(100vw, 5%); } }
+
+@keyframes contMoveForw {
+  0%, 100% {
+    -webkit-transform: translate(0, 5%);
+    transform: translate(0, 5%); }
+  50% {
+    -webkit-transform: translate(-100vw, 5%);
+    transform: translate(-100vw, 5%); }
+  50.00001% {
+    -webkit-transform: translate(100vw, 5%);
+    transform: translate(100vw, 5%); } }
+
 @-webkit-keyframes moveArrowRight {
   0% {
     -webkit-transform: translateX(0);

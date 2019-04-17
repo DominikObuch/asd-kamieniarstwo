@@ -4,8 +4,6 @@ let arrowForwardEl = document.getElementsByClassName("zoomed__arrow--forward")[0
 let isNotPlayingAnim = true;
 let handleArrowBackClick = () => {
     let currentElNb = +(zoomed.zoomHeader.textContent.substring(zoomed.zoomHeader.textContent.lastIndexOf(pages.letterNumber[pages.letterNumber.length-1]) + 1, zoomed.zoomHeader.textContent.length))
-    console.log(currentElNb)
-    debugger
     if ((currentElNb != 1 && isNotPlayingAnim)) {
         isNotPlayingAnim = false;
         currentElNb--;
