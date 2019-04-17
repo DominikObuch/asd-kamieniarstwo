@@ -175,9 +175,6 @@ gulp.task("uncss", function () {
 gulp.task('useref', () => {
   return gulp.src(['app/**/*.html'])
     .pipe(useref())
-    .pipe(gulpIf('*.js && !== easyzoom.js', babel({
-      presets: ['@babel/env']
-    })))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulpIf("app/*.html", htmlmin({
       collapseWhitespace: true,
