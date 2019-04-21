@@ -105,8 +105,10 @@
 .easyzoom {
 
     text-align: center;
+
     @include media-breakpoint-up(md) {
         display: flex;
+
         max-width: 40vw;
     }
 
@@ -119,12 +121,17 @@
         display: flex;
         position: absolute;
         right: 0;
-        object-fit: cover;
         margin-right: 1rem;
         height: 70vh;
         z-index: 1;
         width: 30vw;
         overflow: hidden;
+
+        img {
+            image-orientation: none;
+            object-fit: contain;
+            vertical-align: bottom;
+        }
     }
 
     img {
@@ -171,35 +178,42 @@
     animation-name: contMoveForw;
     animation-duration: 1.5s;
 }
+
 .cont-move-back {
     animation-timing-function: ease;
     animation-name: contMoveBack;
     animation-duration: 1.5s;
 }
-@keyframes contMoveBack{
-    0% , 100% {
-        transform: translate(0,5%);
+
+@keyframes contMoveBack {
+
+    0%,
+    100% {
+        transform: translate(0, 5%);
     }
 
     50% {
-        transform: translate(100vw,5%);
+        transform: translate(100vw, 5%);
     }
 
     50.00000001% {
-        transform: translate(-100vw,5%);
+        transform: translate(-100vw, 5%);
     }
 }
+
 @keyframes contMoveForw {
-    0% , 100% {
-        transform: translate(0,5%);
+
+    0%,
+    100% {
+        transform: translate(0, 5%);
     }
 
     50% {
-        transform: translate(-100vw,5%);
+        transform: translate(-100vw, 5%);
     }
 
     50.00001% {
-        transform: translate(100vw,5%);
+        transform: translate(100vw, 5%);
     }
 
 }

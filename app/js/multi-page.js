@@ -61,9 +61,6 @@ let pages = {
     articleEl: [ //there are all the dom nodes I will change
         document.getElementsByClassName("products__heading"),
         document.getElementsByClassName("d-category"),
-        document.getElementsByClassName("d-granite"),
-        document.getElementsByClassName("d-width"),
-        document.getElementsByClassName("d-height"),
         document.getElementsByClassName("d-price"),
         document.getElementsByClassName("products__image"),
     ],
@@ -76,14 +73,12 @@ let pages = {
 
     containersEl: document.getElementsByClassName("products__card"),
 
-
     overwriteCurrent() {
-
         let i = 0;
 
         for (this.currentShown = this.lastShown; this.currentShown < this.containersEl.length + this.lastShown; this.currentShown++) { //this one for current article 
             if (this.data[this.currentShown] !== undefined) { //  image changing
-                this.articleEl[6][i].src = `${this.imageSrc}${pages.lastShown+i+1}.jpg`   
+                this.articleEl[3][i].src = `${this.imageSrc}${pages.lastShown+i+1}.jpg`   
             }
 
             for (let x = 0; x < this.articleEl.length; x++) { //this one for specyfic property

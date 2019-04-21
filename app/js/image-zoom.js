@@ -14,10 +14,11 @@ let zoomed = { //an object that represents the zoomed element
     appearZoom(imgSrc, headingText) {
 
         this.isZoomed = true;
-        this.currentImgSrc = imgSrc;
-        this.zoomSrc.src = this.currentImgSrc; //change current image src
+        let fullSizeSrc = imgSrc.replace("products","fullsize-products");
+        this.zoomSrc.src = fullSizeSrc; //change current image src
         this.zoomHeader.textContent = headingText;
-        this.zoomSrc.parentNode.dataset.src = this.currentImgSrc;
+   
+        this.zoomSrc.parentNode.dataset.src = fullSizeSrc;
         this.zoomEl.classList.remove("no-zoom");
         api.swap();
     },
@@ -29,7 +30,6 @@ let zoomed = { //an object that represents the zoomed element
         }
 
     },
-    currentImgSrc: null,
     zoomEl: document.getElementById("zoomEl"),
 }
 for (let i = 0; i < zoomed.images.length; i++) {

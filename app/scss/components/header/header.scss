@@ -27,7 +27,7 @@
         z-index: 1000;
         left: 0;
         background: rgba(255, 255, 255, 0.93);
-
+        font-size: $font-size + 0.3rem;
     }
 
     &__video,
@@ -73,5 +73,12 @@
             font-size: $font-size + 2rem;
             top: 52%;
         }
+    }
+}
+.nav-link{
+    transition: 0.1s transform;
+    transition-timing-function: ease-in;
+    &:hover{
+        transform: scale(1.1);
     }
 }
