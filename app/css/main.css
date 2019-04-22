@@ -638,9 +638,6 @@ h4 {
 .bg-light {
   background-color: #f8f9fa !important; }
 
-.bg-dark {
-  background-color: #343a40 !important; }
-
 .border-0 {
   border: 0 !important; }
 
@@ -698,6 +695,11 @@ h4 {
     -webkit-box-direction: normal !important;
     -ms-flex-direction: row !important;
     flex-direction: row !important; }
+  .flex-md-row-reverse {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: reverse !important;
+    -ms-flex-direction: row-reverse !important;
+    flex-direction: row-reverse !important; }
   .justify-content-md-end {
     -webkit-box-pack: end !important;
     -ms-flex-pack: end !important;
@@ -815,9 +817,7 @@ h4 {
 
 @media (min-width: 768px) {
   .p-md-3 {
-    padding: 1rem !important; }
-  .pl-md-3 {
-    padding-left: 1rem !important; } }
+    padding: 1rem !important; } }
 
 @media (min-width: 992px) {
   .mr-lg-4 {
@@ -833,8 +833,6 @@ h4 {
   text-align: center !important; }
 
 @media (min-width: 768px) {
-  .text-md-left {
-    text-align: left !important; }
   .text-md-center {
     text-align: center !important; } }
 
@@ -1112,7 +1110,7 @@ ul {
   .ofert-section__image {
     -o-object-fit: cover;
     object-fit: cover;
-    max-height: 27rem; }
+    max-height: 20rem; }
     .ofert-section__image--double {
       height: 12rem; }
       @media (min-width: 576px) {
@@ -1130,6 +1128,8 @@ ul {
     background: rgba(255, 255, 255, 0.8);
     padding: 0;
     border: none; }
+    .ofert-section__card--fullSize {
+      background: rgba(0, 0, 0, 0.8); }
   .ofert-section__btn {
     font-family: "Roboto", sans-serif; }
 
