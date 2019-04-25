@@ -1,5 +1,7 @@
 .ofert-section {
     background: $color-light;
+    display: flex;
+    flex-wrap: wrap;
 
     @include media-breakpoint-up(md) {
         background-size: cover;

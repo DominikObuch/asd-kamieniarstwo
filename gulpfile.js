@@ -166,6 +166,7 @@ gulp.task("uncss", function () {
         /\.hamburger__expanded/,
         /\.collapsed/,
         /\.menu__show/,
+        /\.d-none/,
         /\.easyzoom-notice/,
         /\.cont-move-forward/,
         /\.cont-move-back/,

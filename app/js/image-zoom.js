@@ -2,8 +2,22 @@
 var $easyzoom = $('.easyzoom').easyZoom();
 var api = $easyzoom.data('easyZoom');
 api.opts.loadingNotice = "ładowanie";
-api.opts.errorNotice = "Zdjęcie nie mogło zostać załadowane";
+api.opts.errorNotice = "zdjęcie nie mogło zostać załadowane";
 api.opts.linkAttribute = "data-src";
+
+let downloadImg = (src, ...imageSrc) => {
+
+    var downloadingImage = new Image();
+
+    downloadingImage.onload = function () {
+
+        for (let i = 0; i < imageSrc.length; i++) {
+            imageSrc[i].src = src;
+        }
+        api.swap();
+    };
+    downloadingImage.src = src;
+}
 
 let zoomed = { //an object that represents the zoomed element 
     images: document.getElementsByClassName("products__image"),
@@ -13,20 +27,22 @@ let zoomed = { //an object that represents the zoomed element
 
     appearZoom(imgSrc, headingText) {
 
+        //clearing imgages src
+        this.zoomSrc.src = "";
+
         this.isZoomed = true;
-        let fullSizeSrc = imgSrc.replace("products","fullsize-products");
-        this.zoomSrc.src = fullSizeSrc; //change current image src
+        let fullSizeSrc = imgSrc.replace("products", "fullsize-products");
+
+        downloadImg(fullSizeSrc, this.zoomSrc, this.zoomSrc.parentNode.dataset)
         this.zoomHeader.textContent = headingText;
-   
-        this.zoomSrc.parentNode.dataset.src = fullSizeSrc;
         this.zoomEl.classList.remove("no-zoom");
-        api.swap();
+
     },
     disappearZoom(el) {
         if (el.target !== document.getElementsByClassName("zoomed__image")[0]) {
             this.zoomEl.classList.add("no-zoom");
             this.isZoomed = false
-            
+
         }
 
     },

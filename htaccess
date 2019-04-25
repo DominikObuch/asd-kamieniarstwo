@@ -1,0 +1,101 @@
+
+<IfModule mod_expires.c>
+
+	ExpiresActive on
+	ExpiresDefault                                    "access plus 1 month"
+	
+	# DATA
+	ExpiresByType text/xml                            "access plus 0 seconds"
+	ExpiresByType text/html                           "access plus 0 seconds"
+	ExpiresByType text/plain                          "access plus 0 seconds"
+	ExpiresByType application/xml                     "access plus 0 seconds"
+	ExpiresByType application/json                    "access plus 0 seconds"
+	ExpiresByType application/rss+xml                 "access plus 1 hour"
+
+	# SCRIPTS
+	ExpiresByType text/css                            "access plus 1 day" 
+	ExpiresByType text/javascript                     "access plus 1 day" 
+	ExpiresByType application/javascript              "access plus 1 month" 
+	ExpiresByType application/x-javascript            "access plus 1 month" 
+	
+	# IMAGES
+	ExpiresByType image/gif                           "access plus 1 month"
+	ExpiresByType image/png                           "access plus 1 month"
+	ExpiresByType image/jpe                           "access plus 1 month"
+	ExpiresByType image/jpg                           "access plus 1 month"
+	ExpiresByType image/jpeg                          "access plus 1 month"
+	ExpiresByType image/jp2                           "access plus 1 month"
+	ExpiresByType image/pipeg                         "access plus 1 month"
+	ExpiresByType image/bmp                           "access plus 1 month"
+	ExpiresByType image/tiff                          "access plus 1 month"
+	ExpiresByType image/svg+xml                       "access plus 1 month"
+	
+	# ICONS
+	ExpiresByType image/ico                           "access plus 1 month"
+	ExpiresByType image/icon                          "access plus 1 month"
+	ExpiresByType text/ico                            "access plus 1 month"
+	ExpiresByType image/x-ico                         "access plus 1 month"
+	ExpiresByType image/x-icon                        "access plus 1 month"
+	ExpiresByType application/ico                     "access plus 1 month"
+
+	# VIDEO
+	ExpiresByType video/ogg                           "access plus 1 month"
+	ExpiresByType video/mp4                           "access plus 1 month"
+	ExpiresByType video/webm                          "access plus 1 month"
+	ExpiresByType video/x-msvideo                     "access plus 1 month"
+	ExpiresByType video/mpeg                          "access plus 1 month"
+	ExpiresByType video/quicktime                     "access plus 1 month"
+	ExpiresByType video/x-la-asf                      "access plus 1 month"
+	ExpiresByType video/x-ms-asf                      "access plus 1 month"
+	ExpiresByType x-world/x-vrml                      "access plus 1 month"
+	
+	# FONTS
+	ExpiresByType font/truetype                       "access plus 1 month"
+	ExpiresByType font/opentype                       "access plus 1 month"
+	ExpiresByType application/x-font-ttf              "access plus 1 month"
+	ExpiresByType application/x-font-woff             "access plus 1 month"
+	ExpiresByType application/font-woff               "access plus 1 month"
+	ExpiresByType application/vnd.ms-fontobject       "access plus 1 month"
+
+</IfModule>
+
+#Przekierowanie na WWW
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^strona.pl [nc]
+RewriteRule ^(.*)$ http://www.asd-kamieniarstwo.pl/$1 [r=301,nc]
+
+#Przekierowanie na bezWWW
+RewriteCond %{HTTP_HOST} ^www.asd-kamieniarstwo.pl$ [NC]
+RewriteRule ^(.*)$ http://strona.pl/$1 [R=301,L]
+
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+
+  # Remove browser bugs (only needed for really old browsers)
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</IfModule>

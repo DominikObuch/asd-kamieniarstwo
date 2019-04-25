@@ -69,7 +69,13 @@
             }
         }
     }
-
+    &__loading{
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        border-width: 0.5rem;
+        z-index: 0;
+    }
     &__cont {
         display: flex;
         justify-content: center;
@@ -93,7 +99,9 @@
     &__image {
         max-width: 90%;
         height: 70vh;
+        z-index: 2;
         object-fit: cover;
+        background: grey;
 
         @include media-breakpoint-up(md) {
             object-fit: cover;
@@ -103,15 +111,23 @@
 }
 
 .easyzoom {
-
     text-align: center;
+    width: 100%;
 
     @include media-breakpoint-up(md) {
         display: flex;
 
         max-width: 40vw;
     }
-
+    a{
+        height: 70vh;
+        width: 100%;
+        background: #F2F2F2;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .easyzoom-flyout {
@@ -128,6 +144,7 @@
         overflow: hidden;
 
         img {
+            
             image-orientation: none;
             object-fit: contain;
             vertical-align: bottom;

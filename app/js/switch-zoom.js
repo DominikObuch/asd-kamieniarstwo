@@ -3,26 +3,30 @@ let arrowForwardEl = document.getElementsByClassName("zoomed__arrow--forward")[0
 
 let isNotPlayingAnim = true;
 let handleArrowBackClick = () => {
-    let currentElNb = +(zoomed.zoomHeader.textContent.substring(zoomed.zoomHeader.textContent.lastIndexOf(pages.letterNumber[pages.letterNumber.length-1]) + 1, zoomed.zoomHeader.textContent.length))
+    let currentElNb = +(zoomed.zoomHeader.textContent.substring(zoomed.zoomHeader.textContent.lastIndexOf(pages.letterNumber[pages.letterNumber.length - 1]) + 1, zoomed.zoomHeader.textContent.length))
     if ((currentElNb != 1 && isNotPlayingAnim)) {
         isNotPlayingAnim = false;
         currentElNb--;
         document.getElementsByClassName("zoomed__cont")[0].classList.add("cont-move-back")
-        window.setTimeout(function () {
-            zoomed.appearZoom(`${pages.imageSrc+currentElNb}.jpg`, `${pages.data[--currentElNb][0]} ${pages.letterNumber+ (++currentElNb)}`)
-        }, 700)
+
+
+        zoomed.appearZoom(`${pages.imageSrc+currentElNb}.jpg`, `${pages.data[--currentElNb][0]} ${pages.letterNumber+ (++currentElNb)}`)
+
+
     }
 }
 let handleArrowForwardClick = () => {
-    let currentElNb = +(zoomed.zoomHeader.textContent.substring(zoomed.zoomHeader.textContent.lastIndexOf(pages.letterNumber[pages.letterNumber.length-1]) + 1, zoomed.zoomHeader.textContent.length))
+    let currentElNb = +(zoomed.zoomHeader.textContent.substring(zoomed.zoomHeader.textContent.lastIndexOf(pages.letterNumber[pages.letterNumber.length - 1]) + 1, zoomed.zoomHeader.textContent.length))
     if ((currentElNb != pages.data.length && isNotPlayingAnim)) {
         isNotPlayingAnim = false;
         currentElNb++;
         document.getElementsByClassName("zoomed__cont")[0].classList.add("cont-move-forward")
-        window.setTimeout(function () {
 
-            zoomed.appearZoom(`${pages.imageSrc+currentElNb}.jpg`, `${pages.data[--currentElNb][0]} ${pages.letterNumber+ (++currentElNb)}`)
-        }, 700)
+
+
+        zoomed.appearZoom(`${pages.imageSrc+currentElNb}.jpg`, `${pages.data[--currentElNb][0]} ${pages.letterNumber+ (++currentElNb)}`)
+
+
     }
 }
 document.getElementsByClassName("zoomed__cont")[0].addEventListener("animationend", function () {
