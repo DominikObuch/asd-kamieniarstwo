@@ -63,6 +63,7 @@ let pages = {
         document.getElementsByClassName("d-category"),
         document.getElementsByClassName("d-price"),
         document.getElementsByClassName("products__image"),
+        document.getElementsByClassName("products__number"),
     ],
 
     scrollTop() {
@@ -94,7 +95,7 @@ let pages = {
                 }
             }
             if (this.data[this.currentShown] !== undefined) { //  letterNumber changing 
-                this.articleEl[0][i].textContent += ` ${this.letterNumber+(pages.lastShown+i+1)}`
+                this.articleEl[4][i].textContent += ` ${this.letterNumber+(pages.lastShown+i+1)}`
 
             }
 
