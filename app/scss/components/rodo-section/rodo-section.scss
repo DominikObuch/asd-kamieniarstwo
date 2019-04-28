@@ -1,0 +1,33 @@
+.rodo-section {
+    position: fixed;
+    bottom: 0rem;
+    z-index: 2000;
+    justify-content: center;
+    display: flex;
+
+    width: 100%;
+
+    font-size: $font-size - 0.3rem;
+
+    border-top: 2px solid rgb(10, 10, 100);
+    padding: 1rem;
+    background: rgb(10, 60, 150);
+    color: white;
+
+    @include media-breakpoint-up(md) {
+        border-top: 3px solid rgb(10, 10, 100);
+    }
+
+    &__btn{
+        font-size: $font-size - .1rem;
+    }
+    &__close-btn {
+
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+
+        width: 2rem;
+        height: 2rem;
+    }
+}

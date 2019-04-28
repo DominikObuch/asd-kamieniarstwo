@@ -46,7 +46,11 @@
             border: none;
         }
     }
-
+    &__number{
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 1rem;
+    }
     &__price {
         color: $color-blue-primary;
         font-weight: 600;

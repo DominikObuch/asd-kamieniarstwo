@@ -1,0 +1,14 @@
+.form{
+    font-family: "Muli", sans-serif;
+    background:rgba(160,200,255, 0.6);
+    box-sizing: content-box;
+    &__background{
+        background: url(../images/second-section/background.svg) center/80% #DDF fixed no-repeat ;
+    }
+    &__input{
+        background: none;
+        border: none;
+        border-bottom: 2px solid #0D426C;
+        border-radius: 0;
+    }
+}

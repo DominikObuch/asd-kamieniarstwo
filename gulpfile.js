@@ -201,6 +201,10 @@ gulp.task('movejs', function () {
       del.sync(["./js", "./css"])
   }, 3000)
 })
+gulp.task('moveform', function () {
+  gulp.src("app/form/*")
+    .pipe(gulp.dest("docs/form/"))
+})
 
 gulp.task('scripts', () => {
   return gulp.src(['docs/js/script.min.js'])
@@ -242,10 +246,10 @@ gulp.task('default', function (callback) {
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:docs', "generate-favicon", ['sass', 'images'], 'prefixer', 'uncss', 'useref', 'minifyhtml', 'dataJSON', 'movejs',
+  runSequence('clean:docs', "generate-favicon", ['sass', 'images'], 'prefixer', 'uncss', 'useref', 'minifyhtml', 'dataJSON',"moveform", 'movejs',
     callback)
 })
 
 gulp.task('minbuild', function (callback) {
-  runSequence('clean:docs', ['sass', 'images'], "useref", "dataJSON", "movejs", callback)
+  runSequence('clean:docs', ['sass', 'images'], "useref", "dataJSON","moveform", "movejs", callback)
 })
