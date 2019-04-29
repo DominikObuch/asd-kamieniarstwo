@@ -27,7 +27,7 @@ var FAVICON_DATA_FILE = 'docs/images/icons/faviconData.json';
 gulp.task('generate-favicon', function (done) {
   realFavicon.generateFavicon({
     masterPicture: 'app/images/icons/favicon.png',
-    dest: 'docs/images/icons',
+    dest: 'app/images/icons',
     iconsPath: './images/icons/',
     design: {
       ios: {
@@ -135,8 +135,9 @@ gulp.task('sass', () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg|mp4|webm)')
+  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg|mp4|webm|xml|ico|json|pdf)')
     .pipe(gulp.dest('docs/images'))
+    
 });
 
 gulp.task('dataJSON', [], function () {
@@ -246,7 +247,7 @@ gulp.task('default', function (callback) {
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:docs', "generate-favicon", ['sass', 'images'], 'prefixer', 'uncss', 'useref', 'minifyhtml', 'dataJSON',"moveform", 'movejs',
+  runSequence('clean:docs', ['sass', 'images'], 'prefixer', 'uncss', 'useref', 'minifyhtml', 'dataJSON',"moveform", 'movejs',
     callback)
 })
 
