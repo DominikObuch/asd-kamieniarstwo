@@ -31,6 +31,11 @@
         font-family: $font-primary;
         line-height: 1.2rem;
         word-break: keep-all;
+        &--logo-heading{
+            text-transform: uppercase;
+            font-size: $font-size + 0.2rem;
+            line-height: 2rem !important;
+        }
     }
 
     &__link {

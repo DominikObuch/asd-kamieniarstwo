@@ -5,7 +5,7 @@ if (!localStorage.getItem("rodo")) {
 for(let i =0; i<rodoCloseEl.length; i++){
     rodoCloseEl[i].addEventListener("click", () => {
         rodoEl.classList.add("d-none");
-//        localStorage.setItem("rodo", "true");
+       localStorage.setItem("rodo", "true");
     })
 }
    
