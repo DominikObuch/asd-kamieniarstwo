@@ -15,6 +15,7 @@ let downloadImg = (src, ...imageSrc) => {
             imageSrc[i].src = src;
         }
         api.swap();
+        document.getElementsByClassName("easyzoom")[0].classList.add("is-ready")
     };
     downloadingImage.src = src;
 }
@@ -32,6 +33,7 @@ let zoomed = { //an object that represents the zoomed element
 
         this.isZoomed = true;
         let fullSizeSrc = imgSrc.replace("products", "fullsize-products");
+
 
         downloadImg(fullSizeSrc, this.zoomSrc, this.zoomSrc.parentNode.dataset)
         this.zoomHeader.textContent = headingText;

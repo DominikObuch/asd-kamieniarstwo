@@ -7144,8 +7144,8 @@ ul {
     margin: 0;
     background: rgba(13, 19, 33, 0.9); }
   .ofert-section__image {
-    object-fit: cover;
-    max-height: 20rem; }
+    width: 100%;
+    object-fit: contain; }
     .ofert-section__image--double {
       height: 12rem; }
       @media (min-width: 576px) {
@@ -7406,8 +7406,8 @@ ul {
         object-fit: contain;
         vertical-align: bottom; } }
   .easyzoom-flyout img {
-    width: 500%;
-    height: 500%; }
+    width: 200%;
+    height: 200%; }
 
 .no-zoom {
   opacity: 0;

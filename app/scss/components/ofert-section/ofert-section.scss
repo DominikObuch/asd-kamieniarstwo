@@ -26,8 +26,9 @@
     }
 
     &__image {
-        object-fit: cover;
-       max-height: 20rem;
+        width: 100%;
+        object-fit: contain;
+
 
         &--double {
             height: 12rem;
