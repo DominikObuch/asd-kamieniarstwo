@@ -37,6 +37,11 @@
                 height: 19rem;
             }
         }
+        &--second{
+            height: 25rem;
+            object-fit: cover;
+            
+        }
     }
 
     &__card-body {

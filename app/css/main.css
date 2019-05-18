@@ -7151,6 +7151,9 @@ ul {
       @media (min-width: 576px) {
         .ofert-section__image--double {
           height: 19rem; } }
+    .ofert-section__image--second {
+      height: 25rem;
+      object-fit: cover; }
   .ofert-section__card-body {
     background: transparent; }
   .ofert-section__paragraph {
@@ -7406,8 +7409,7 @@ ul {
         object-fit: contain;
         vertical-align: bottom; } }
   .easyzoom-flyout img {
-    width: 200%;
-    height: 200%; }
+    width: 70vw; }
 
 .no-zoom {
   opacity: 0;
