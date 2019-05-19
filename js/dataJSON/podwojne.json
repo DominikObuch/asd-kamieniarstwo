@@ -7,7 +7,7 @@
         ["brąz królewski", "nagrobki podwójne"],
         ["brąz królewski ", "nagrobki podwójne"],
         ["brąz królewski ", "nagrobki podwójne"],
-        ["brak danych", "nagrobki podwójne"],
+        ["strzelin + impala", "nagrobki podwójne"],
         ["impala ", "nagrobki podwójne"],
         ["impala ", "nagrobki podwójne"],
         ["impala ", "nagrobki podwójne"],
@@ -22,13 +22,13 @@
         ["strzegom i szwed", "nagrobki podwójne"],
         ["strzegom i impala ", "nagrobki podwójne"],
         ["strzegom i szwed", "nagrobki podwójne"],
-        ["strzegom ", "nagrobki podwójne"],
+        ["strzegom + impala ", "nagrobki podwójne"],
         ["strzelin i impala", "nagrobki podwójne"],
         ["strzegom ", "nagrobki podwójne"],
         ["szwed", "nagrobki podwójne"],
         ["vanga", "nagrobki podwójne"],
-        ["wiscount white", "nagrobki podwójne"],
-        ["brak danych", "nagrobki podwójne"]
+        ["viscount white", "nagrobki podwójne"],
+        ["szwed", "nagrobki podwójne"]
                ],
         "src": "../images/products/double/double",
         "letterNumber": "R"
