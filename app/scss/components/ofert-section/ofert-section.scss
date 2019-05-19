@@ -28,13 +28,16 @@
     &__image {
         width: 100%;
         object-fit: contain;
-
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
 
         &--double {
             height: 12rem;
+            object-fit: cover;
 
             @include media-breakpoint-up(sm) {
-                height: 19rem;
+                height: auto;
+                object-fit: contain;
             }
         }
         &--second{
