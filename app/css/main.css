@@ -1568,12 +1568,15 @@ ul {
         width: 80%;
         height: auto; } }
   .zoomed__image {
-    max-width: 90%;
+    width: 100vw;
     height: 70vh;
     z-index: 2;
     -o-object-fit: cover;
     object-fit: cover;
-    background: grey; }
+    background: transparent; }
+    @media (min-width: 576px) {
+      .zoomed__image {
+        width: 90%; } }
     @media (min-width: 768px) {
       .zoomed__image {
         -o-object-fit: cover;
@@ -1650,16 +1653,16 @@ ul {
   animation-timing-function: ease;
   -webkit-animation-name: contMoveForw;
   animation-name: contMoveForw;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s; }
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
 
 .cont-move-back {
   -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
   -webkit-animation-name: contMoveBack;
   animation-name: contMoveBack;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s; }
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
 
 @-webkit-keyframes contMoveBack {
   0%,

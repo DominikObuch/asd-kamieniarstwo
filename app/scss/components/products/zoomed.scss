@@ -99,12 +99,14 @@
 
 
     &__image {
-        max-width: 90%;
+        width: 100vw;
         height: 70vh;
         z-index: 2;
         object-fit: cover;
-        background: grey;
-
+        background: transparent;
+        @include media-breakpoint-up(sm) {
+            width: 90%;
+        }
         @include media-breakpoint-up(md) {
             object-fit: cover;
             max-width: 40vw;
@@ -194,13 +196,13 @@
 .cont-move-forward {
     animation-timing-function: ease;
     animation-name: contMoveForw;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
 }
 
 .cont-move-back {
     animation-timing-function: ease;
     animation-name: contMoveBack;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
 }
 
 @keyframes contMoveBack {
