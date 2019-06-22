@@ -1,6 +1,4 @@
-{
-    "data": [
-        ["azul noche", "nagrobki pojedyncze"],
+{ "data": [["azul noche", "nagrobki pojedyncze"],
         ["baltic green + szwed", "nagrobki pojedyncze"],
         ["brasilian + szwed", "nagrobki pojedyncze"],
         ["brasilian + szwed", "nagrobki pojedyncze"],
@@ -74,7 +72,6 @@
         ["szwed", "nagrobki pojedyncze"],
         ["szwed + vanga", "nagrobki pojedyncze"],
         ["szwed sarkofag", "nagrobki pojedyncze"],
-        ["szwed", "nagrobki pojedyncze"],
         ["tarn + impala", "nagrobki pojedyncze"],
         ["tarn", "nagrobki pojedyncze"],
         ["tarn + wkład impala", "nagrobki pojedyncze"],

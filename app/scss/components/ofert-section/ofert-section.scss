@@ -27,6 +27,8 @@
 
     &__image {
         width: 100%;
+        height: auto;
+        min-height: 15rem;
         object-fit: contain;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -34,6 +36,7 @@
         &--double {
             height: 12rem;
             object-fit: cover;
+            min-height: auto;
 
             @include media-breakpoint-up(sm) {
                 height: auto;
