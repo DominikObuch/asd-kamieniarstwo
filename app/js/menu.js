@@ -1,4 +1,4 @@
-document.getElementById("vid").addEventListener("loadeddata", ()=>{
+window.addEventListener("load", ()=>{
    for(let i = 0; i < document.getElementsByClassName("menu__list-cont").length; i++){
        document.getElementsByClassName("menu__list-cont")[i].classList.remove("zero-opacity")
    }

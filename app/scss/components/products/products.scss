@@ -16,7 +16,7 @@
         @include media-breakpoint-up(md) {
             height: 400px;
             width: 400px;
-            object-fit: fill;
+            object-fit: cover;
             border-radius: 5px 0 0 5px;
             &--additives{
                 height: 500px;
