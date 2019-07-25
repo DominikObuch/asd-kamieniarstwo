@@ -2,7 +2,6 @@
 var $easyzoom = $('.easyzoom').easyZoom();
 var api = $easyzoom.data('easyZoom');
 api.opts.loadingNotice = "ładowanie";
-api.opts.errorNotice = "zdjęcie nie mogło zostać załadowane";
 api.opts.linkAttribute = "data-src";
 
 let downloadImg = (src, ...imageSrc) => {
@@ -30,13 +29,17 @@ let zoomed = { //an object that represents the zoomed element
 
     appearZoom(imgSrc, headingText) {
 
-        //clearing imgages src
+        //clearing images src
         this.zoomSrc.src = "";
 
         this.isZoomed = true;
         let fullSizeSrc = imgSrc.replace("products", "fullsize-products");
 
         downloadImg(fullSizeSrc, this.zoomSrc, this.zoomSrc.parentNode.dataset)
+        this.zoomHeader.classList.remove("zoomed__header")
+        window.setTimeout(function () {
+            this.zoomHeader.classList.add("zoomed__header")
+        }, 1)
         this.zoomHeader.textContent = headingText;
         this.zoomEl.classList.remove("no-zoom");
 

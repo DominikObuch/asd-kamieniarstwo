@@ -1140,9 +1140,20 @@ textarea.form-control {
   transform: translate(-50%, -50%);
   color: #F2F2F2;
   font-family: "Ubuntu", sans-serif;
-  width: 90%; }
+  width: 90%;
+  -webkit-transition: 3s opacity, 1.5s -webkit-transform;
+  transition: 3s opacity, 1.5s -webkit-transform;
+  transition: 1.5s transform, 3s opacity;
+  transition: 1.5s transform, 3s opacity, 1.5s -webkit-transform;
+  -webkit-transform: translate(-150%, -50%);
+  transform: translate(-150%, -50%);
+  opacity: 0;
+  -webkit-transition-timing-function: cubic-bezier(0, 0.01, 0.52, 1.3);
+  transition-timing-function: cubic-bezier(0, 0.01, 0.52, 1.3); }
   .header__heading--main-page {
-    top: 45%; }
+    top: 45%;
+    -webkit-transition: unset;
+    transition: unset; }
 
 @media (min-width: 768px) {
   .header__video {
@@ -1794,6 +1805,7 @@ ul {
   .rodo-section__btn {
     font-size: 0.9rem; }
   .rodo-section__close-btn {
+    cursor: pointer;
     position: absolute;
     top: 0.5rem;
     right: 1rem;
@@ -1806,10 +1818,10 @@ ul {
   transform: translateY(20%); }
 
 .lazy-loaded {
-  -webkit-transition: 1.1s opacity, 1.1s -webkit-transform;
-  transition: 1.1s opacity, 1.1s -webkit-transform;
-  transition: 1.1s transform, 1.1s opacity;
-  transition: 1.1s transform, 1.1s opacity, 1.1s -webkit-transform;
+  -webkit-transition: 1.8s opacity, 1.1s -webkit-transform;
+  transition: 1.8s opacity, 1.1s -webkit-transform;
+  transition: 1.1s transform, 1.8s opacity;
+  transition: 1.1s transform, 1.8s opacity, 1.1s -webkit-transform;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   -webkit-transform: translateY(0);

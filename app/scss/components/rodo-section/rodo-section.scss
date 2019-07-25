@@ -22,7 +22,7 @@
         font-size: $font-size - .1rem;
     }
     &__close-btn {
-
+        cursor: pointer;
         position: absolute;
         top: 0.5rem;
         right: 1rem;

@@ -202,7 +202,7 @@
                     </div>
                     <div class="row" style="margin-bottom:30px;">
                         <div class="col-sm-5">
-                            <img src="captcha.php" id="captcha_image" />
+                            <img src="./form/captcha.php" id="captcha_image" />
                             <br />
                             <a id="captcha_reload" href="#">Inny obrazek</a>
                         </div>
@@ -213,9 +213,9 @@
                         </div>
                         <div class="col-md-12  mt-3 d-flex align-content-center align-items-center">
                             <button type="submit" class="btn col btn-lg btn-primary" id="btnContactUs">Wyślij!</button>
-                            <div id="success_message " class="h4 mt-2 col text-success" style="display: none;"> Wysłano
+                            <div id="success_message" class="h4 mt-2 col text-success" style="display: none;"> Wysłano
                                 wiadomość </div>
-                            <div id="error_message " class="h4 mt-2 col text-danger" style="display:none;">Podczas
+                            <div id="error_message" class="h4 mt-2 col text-danger" style="display:none;">Podczas
                                 wysyłania
                                 wiadomości
                                 wystąpił błąd! </div>
@@ -337,9 +337,10 @@
 
     <!-- microdata end-->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
@@ -351,6 +352,10 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/hamburger.js"></script>
     <script type="text/javascript" src="js/lazy-loading.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js form/form.js-->
+    <script src="form/form.js"></script>
     <!-- endbuild -->
 </body>
 <div id="fb-root"></div>

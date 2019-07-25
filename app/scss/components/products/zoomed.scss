@@ -69,7 +69,18 @@
             }
         }
     }
+    
+    &__header{
+        animation-name: headerAppear;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in; 
 
+        &--first-time{
+            opacity: 1 !important;
+            transition: unset;
+        }
+    }
     &__loading {
         position: absolute;
         width: 5rem;
@@ -263,5 +274,13 @@
 
     100% {
         transform: translateX(0);
+    }
+}
+@keyframes headerAppear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }

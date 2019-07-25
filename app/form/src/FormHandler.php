@@ -42,11 +42,11 @@ class FormHandler
 		$this->mailer = new PHPMailer;
 		$this->mail_template='';
 
-		$this->mailer->Subject = "asd-kamieniarstwo klient";
+		$this->mailer->Subject = "Contact Form Submission ";
 
 		$host = isset($_SERVER['SERVER_NAME'])?$_SERVER['SERVER_NAME']:'localhost';
         $from_email ='forms@'.$host;
-   		$this->mailer->setFrom($from_email,'Contact Form',false);  
+   		$this->mailer->setFrom($from_email,'ASD strona klient',false);  
 
    		$this->captcha = false;   
 
@@ -214,7 +214,7 @@ class FormHandler
 		{
 			return json_encode([
 						'result'=>'captcha_error',
-						'errors'=>['captcha'=>'Captcha code not entered']
+						'errors'=>['captcha'=>'Nie wprowadzono Captchy']
 						]);
 		}
 		else
@@ -225,7 +225,7 @@ class FormHandler
 			{
 				return json_encode([
 						'result'=>'captcha_error',
-						'errors'=>['captcha'=>'Captcha code does not match']
+						'errors'=>['captcha'=>'Captcha została źle wpisana']
 						]);		
 			}
 		}
@@ -258,7 +258,7 @@ class FormHandler
 
 	private function compose_mail($post)
 	{
-		$content = "Form submission: \n\n";
+		$content = "Tresc wiadomosci: \n\n";
 		foreach($post as $name=>$value)
 		{
 			$content .= ucwords($name).":\n";

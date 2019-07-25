@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("vid") != undefined) {
         document.getElementById('vid').play();
     }
+    window.setTimeout(function () {
+        document.getElementsByClassName("header__heading")[0].classList.add("header__heading--active")
+    }, 200)
+
 })
 for (let i = 0; i < document.getElementsByClassName("link-smooth").length; i++) {
     document.getElementsByClassName("link-smooth")[i].addEventListener('click', function (e) {
