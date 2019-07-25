@@ -4,18 +4,22 @@ $(function()
     function after_form_submitted(data) 
     {
         if(data.result == 'success')
-        {
+        {   
+            document.getElementById("success_message").style.display = "flex";
+            document.getElementById("btnContactUs").style.display ="none"
             $('#success_message').show();
-            
+            $('#error_message').hide();
         }
         else
         {
             $('#error_message').append('<ul></ul>');
 
             jQuery.each(data.errors,function(key,val)
-            {
+            {   
                 $('#error_message ul').append('<li>'+key+':'+val+'</li>');
             });
+
+            document.getElementById("error_message").style.display = "flex";
             $('#success_message').hide();
             $('#error_message').show();
 
@@ -52,7 +56,7 @@ $(function()
 
                     $.ajax({
                 type: "POST",
-                url: 'handler.php',
+                url: './form/handler.php',
                 data: $form.serialize(),
                 success: after_form_submitted,
                 dataType: 'json' 
@@ -71,6 +75,7 @@ $(function()
 	  d = new Date();
 	  var src = $("img#captcha_image").attr("src");
 	  src = src.split(/[?#]/)[0];
+	  
 	  $("img#captcha_image").attr("src", src+'?'+d.getTime());
 	});
 });
