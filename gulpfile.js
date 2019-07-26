@@ -172,6 +172,7 @@ gulp.task("uncss", function () {
         /\.cont-move-forward/,
         /\.cont-move-back/,
         /\.easyzoom-flyout/,
+        /\.header__heading--active/,
         /\.collapsing/
       ]
     }))
