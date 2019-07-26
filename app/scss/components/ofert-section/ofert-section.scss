@@ -5,17 +5,19 @@
 
     @include media-breakpoint-up(md) {
         background-size: cover;
-        &--first{
+
+        &--first {
             background: url(../images/ofert/bg2.jpg) no-repeat fixed center;
             background-size: cover;
-            
+
         }
-        &--second{
+
+        &--second {
             background: url(../images/ofert/bg3.jpg) no-repeat fixed center;
             background-size: cover;
         }
 
-        
+
     }
 
     &__heading {
@@ -23,6 +25,13 @@
         font-family: $font-secondary;
         margin: 0;
         background: rgba(13, 19, 33, 0.9);
+    }
+
+    &__link {
+        min-height: 15rem;
+        &-d {
+            min-height: 12.6rem;
+        }
     }
 
     &__image {
@@ -43,10 +52,11 @@
                 object-fit: contain;
             }
         }
-        &--second{
+
+        &--second {
             height: 25rem;
             object-fit: cover;
-            
+
         }
     }
 
@@ -69,8 +79,9 @@
         background: rgba(255, 255, 255, 0.8);
         padding: 0;
         border: none;
-        &--fullSize{
-            background: rgba(0,0,0,0.8);
+
+        &--fullSize {
+            background: rgba(0, 0, 0, 0.8);
         }
 
     }

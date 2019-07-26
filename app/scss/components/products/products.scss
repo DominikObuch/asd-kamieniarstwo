@@ -12,13 +12,16 @@
         padding: 0;
         object-fit: cover;
         cursor: zoom-in;
-
+        @include media-breakpoint-up(sm){
+            width: 400px;
+        }
         @include media-breakpoint-up(md) {
             height: 400px;
             width: 400px;
             object-fit: cover;
             border-radius: 5px 0 0 5px;
-            &--additives{
+
+            &--additives {
                 height: 500px;
             }
         }
@@ -27,10 +30,12 @@
     &__heading {
         font-weight: 500;
         text-transform: capitalize;
-        &::first-letter{
+
+        &::first-letter {
             font-family: $font-secondary;
             font-size: 2.2rem;
         }
+
         @include media-breakpoint-up(md) {
             font-weight: 600;
         }
@@ -41,19 +46,43 @@
         border-radius: 0 0 4px 4px;
         border-top: 1px dotted $color-grey;
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(sm) {
             border-radius: 0 5px 5px 0;
             border: none;
         }
     }
-    &__number{
+
+    &__number {
         font-weight: 600;
         font-size: 2rem;
         height: 2rem;
     }
+
     &__price {
         color: $color-blue-primary;
         font-weight: 600;
+    }
+
+    &__info {
+        width: 100%;
+        display: flex;
+        height: 7rem;
+        justify-content: center;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 0 0 5px 5px;
+        padding: 1rem;
+
+        @include media-breakpoint-up(md) {
+            height: 5rem;
+        }
+
+        &--exposition {
+            flex-direction: column;
+            height: 15rem;
+            @include media-breakpoint-up(sm){
+                height: 10rem; //TODO add media queries
+            }
+        }
     }
 
     &__list-point {
@@ -64,6 +93,7 @@
         justify-content: center;
         list-style: none;
         cursor: pointer;
+
         @include media-breakpoint-up(md) {
             justify-content: end;
         }

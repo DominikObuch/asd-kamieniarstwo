@@ -59,17 +59,19 @@
         transition: 1s transform, 1.5s opacity;
         transform: translate(-100%, -50%);
         opacity: 0;
-        transition-timing-function: cubic-bezier(0,.01,.52,1.3);
-        &--active{
+        transition-timing-function: cubic-bezier(0, .01, .52, 1.3);
+
+        &--active {
             transform: translate(-50%, -50%);
             opacity: 1;
         }
+
         &--main-page {
             top: 45%;
             transition: unset;
             opacity: 1;
             transform: translate(-50%, -50%);
-           
+
         }
     }
 }
