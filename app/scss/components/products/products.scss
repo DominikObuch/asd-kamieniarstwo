@@ -80,7 +80,7 @@
             flex-direction: column;
             height: 15rem;
             @include media-breakpoint-up(sm){
-                height: 10rem; //TODO add media queries
+                height: 10rem; 
             }
         }
     }
