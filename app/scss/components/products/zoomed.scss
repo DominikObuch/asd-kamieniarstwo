@@ -110,6 +110,7 @@
 
 
     &__image {
+        user-select: none;
         width: 100vw;
         height: 70vh;
         z-index: 2;
@@ -147,6 +148,7 @@
 
 .easyzoom-flyout {
     display: none;
+    user-select: none;
 
     @include media-breakpoint-up(md) {
         display: flex;

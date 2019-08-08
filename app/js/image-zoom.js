@@ -2,7 +2,7 @@
 var $easyzoom = $('.easyzoom').easyZoom();
 var api = $easyzoom.data('easyZoom');
 api.opts.loadingNotice = "ładowanie";
-api.opts.errorNotice = "Wystąpił błąd podczas ładowania zdjęcia";
+api.opts.errorNotice = "";
 api.opts.linkAttribute = "data-src";
 
 let downloadImg = (src, ...imageSrc) => {
