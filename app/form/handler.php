@@ -22,6 +22,6 @@ $validator->field('comments')->maxLength(6000);
 $pp->requireCaptcha();
 
 
-$pp->sendEmailTo('qerion11@wp.pl'); // ← Your email here
+$pp->sendEmailTo('biuro@asd-kamieniarstwo.pl'); // ← Your email here
 
 echo $pp->process($_POST);
