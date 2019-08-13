@@ -120,8 +120,9 @@
             width: 90%;
         }
         @include media-breakpoint-up(md) {
-            object-fit: cover;
+            object-fit: scale-down;
             max-width: 40vw;
+            width: 100%;
         }
     }
 }

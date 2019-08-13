@@ -1389,7 +1389,11 @@ ul {
       width: 400px;
       -o-object-fit: cover;
       object-fit: cover;
-      border-radius: 5px 0 0 5px; } }
+      border-radius: 5px 0 0 5px; }
+      .products__image--exposition {
+        width: 320px;
+        -o-object-fit: initial;
+        object-fit: initial; } }
 
 .products__heading {
   font-weight: 500;
@@ -1638,9 +1642,10 @@ ul {
         width: 90%; } }
     @media (min-width: 768px) {
       .zoomed__image {
-        -o-object-fit: cover;
-        object-fit: cover;
-        max-width: 40vw; } }
+        -o-object-fit: scale-down;
+        object-fit: scale-down;
+        max-width: 40vw;
+        width: 100%; } }
 
 .easyzoom {
   text-align: center;
