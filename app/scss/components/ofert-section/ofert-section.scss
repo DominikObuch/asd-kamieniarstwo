@@ -68,7 +68,12 @@
         font-family: $font-primary;
         font-size: $font-size;
     }
+    &__last-paragraph{
+        @include media-breakpoint-up(md){
+            position: absolute;
 
+        }
+    }
     &__header {
         font-family: $font-primary;
         font-weight: bold;

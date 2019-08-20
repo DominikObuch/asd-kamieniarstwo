@@ -1355,6 +1355,9 @@ ul {
   .ofert-section__paragraph {
     font-family: "Muli", sans-serif;
     font-size: 1rem; }
+  @media (min-width: 768px) {
+    .ofert-section__last-paragraph {
+      position: absolute; } }
   .ofert-section__header {
     font-family: "Muli", sans-serif;
     font-weight: bold; }
